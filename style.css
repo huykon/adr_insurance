@@ -28,6 +28,18 @@
 .icon-web:before {
   content: "\e908";
 }
+.icon-email:before {
+  content: "\e909";
+}
+.icon-error:before {
+  content: "\e90a";
+}
+.icon-mailbox:before {
+  content: "\e90b";
+}
+.icon-success:before {
+  content: "\e90c";
+}
 /*
 Landing Page*/
 .wrapper-adr-insurance .comf_view__result .insw_label__custom {
@@ -662,4 +674,23 @@ Landing Page*/
 .ip-fail-warp .ip-fail__help-support-content strong {
   display: block;
   font-size: 16px;
+}
+.ip-thank-you-warp .ip-fail__title {
+  color: #1CBE55;
+}
+.ip-thank-you-warp .ip-fail__help .ip-fail__title {
+  color: #2E3038;
+}
+.ip-title-name-consumer {
+  font-size: 16px;
+  font-weight: bold;
+}
+.ip-thank-you-order-number {
+  display: inline-block;
+  color: #ffffff;
+  padding: 6px 35px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #1CBE55;
+  border-radius: 5px;
 }
