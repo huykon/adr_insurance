@@ -33,28 +33,7 @@
                             <li class="liOffcanvas header--user-group col-md-10 visible-md visible-lg"><div class="icon-user"><div class="icon-user--inner"><i class="adr-icon icon-account-circle"></i><span class="js-user-gift-code user-group--gift hide"></span></div></div><div class="js-user--info"><div class="user-group--info"><div class="pop-hover js-pop-hover" id="dropDown_6"><a href="javascript:void(0);" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="pop-hover-title"><span>Đăng nhập &amp; Đăng ký Tài khoản</span><span class="caret"></span></a><div class="dropdown-menu"><ul><li><a href="#" class="btn btn-login js-sign-in__popup"> Đăng nhập</a></li><li><span>Chưa có tài khoản?</span></li><li><a href="#" class="btn-sigup highlight-blue js-sign-up__popup_button"> Đăng ký tài khoản mới</a></li></ul></div></div></div></div></li>
 
                             <!-- Cart Preview -->
-                            <li class="col-sm-12 col-md-2">
-                                <div class="nav-cart">
-                                    <a href="/cart" class="mini-cart-link js-mini-cart-link" data-mini-cart-url="/cart/rollover" data-mini-cart-refresh-url="/cart/miniCart/SUBTOTAL" data-mini-cart-name="Cart" data-mini-cart-empty-name="Empty Cart" data-mini-cart-items-text="Items">
-                                        <div class="mini-cart-icon">
-                                            <span class="adr-icon icon-new-cart hidden-xs hidden-sm"></span>
-                                            <span class="mini-cart-total-product js-cart-total-unit">0</span>
-                                        </div>
-                                    </a>
-
-                                    <div class="mini-shopping-cart">
-                                        <div class="mini-shopping-cart__content">
-                                            <figure class="mini-shopping-cart__empty">
-                                                <img src="images/cart-empty.png" alt="cart empty">
-                                            </figure>
-
-                                            <p class="mini-shopping-cart__empty-message">
-                                                Bạn chưa có sản phẩm trong giỏ hàng
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
+                            <li class="col-sm-12 col-md-2"></li>
                         </ul>
                     </div>
                 </div>
@@ -62,24 +41,77 @@
         </nav>
     </header>
 
-    <!-- Start Empy Cart -->
-    <div id="content" class="clearfix">
-        <div class="js-shopping-cart js-cart--container page-cart">
-            <div class="cart">
-                <div class="cart-empty">
-                    <!-- Style new empty cart -->
-                    <figure class="cart-empty__image">
-                        <img src="images/cart-empty.png" alt="cart empty">
+    <!-- Start ip fail -->
+    <div class="ip-fail-warp">
+        <div class="container">
+            <div class="ip-fail__inner text-center">
+                <div class="ip-fail__payment-error">
+                    <figure>
+                        <img src="images/payment-error.png" alt="payment" />
                     </figure>
 
-                    <h3 class="cart-empty_title">Bạn chưa có sản phẩm trong giỏ hàng</h3>
+                    <h3 class="ip-fail__title">
+                        Payment Unsuccessful
+                    </h3>
 
-                    <a href="/" class="btn-cart-continue-shopping" id="js-cart-continue-shopping-button">Tiếp tục mua sắm</a>
+                    <p class="ip-fail__description">
+                        Something went wrong with the transaction.<br />
+                        Something here about credit card and system. Please check your card number status
+                    </p>
+
+                    <a href="#" class="ip-fail__btn-return">
+                        Return and retry
+                    </a>
+                </div>
+
+                <div class="ip-fail__help">
+                    <h3 class="ip-fail__title">
+                        Need Help?
+                    </h3>
+
+                    <p class="ip-fail__description">
+                        Don't worry! We're here to assist you. Available 7 days a week 9am to 8pm
+                    </p>
+
+                    <div class="ip-fail__help-support">
+                       <div class="ip-fail__help-col-4">
+                           <div class="ip-fail__help-support-item">
+                               <i class="adr-icon icon-phone-new"></i>
+
+                               <div class="ip-fail__help-support-content">
+                                   <span>Give us a call!</span>
+                                   <strong>0284 845 2299</strong>
+                               </div>
+                           </div>
+                       </div>
+
+                       <div class="ip-fail__help-col-4">
+                           <div class="ip-fail__help-support-item">
+                               <i class="adr-icon icon-message"></i>
+
+                               <div class="ip-fail__help-support-content">
+                                   <strong>Live Chat</strong>
+                               </div>
+                           </div>
+                       </div>
+
+                       <div class="ip-fail__help-col-4">
+                           <div class="ip-fail__help-support-item">
+                               <i class="adr-icon icon-web"></i>
+
+                               <div class="ip-fail__help-support-content">
+                                   <a href="#">
+                                       <strong>Online Support</strong>
+                                   </a>
+                               </div>
+                           </div>
+                       </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- End Empy Cart -->
+    <!-- End ip fail -->
 
 
     <div id="recentlyreviewedproducts"><section class="product__reviewed">
@@ -124,12 +156,6 @@
 
 <!-- Bootstrap jquery v3.2.0 -->
 <script src="js/bootstrap.min.js"></script>
-
-<!-- nicescroll jquery v3.7.6 -->
-<script src="js/jquery.nicescroll.min.js"></script>
-
-<!-- Custom jquery-->
-<script src="js/custom.js"></script>
 
 </body>
 </html>
