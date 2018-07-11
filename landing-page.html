@@ -1536,10 +1536,10 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6 col-lg-6 left_slider__insurance">
-                            <div class="text__slogan">
+                            <!--<div class="text__slogan">
                                 <h2 class="ins__title">Dễ dàng <br> so sánh</h2>
                                 <h6 class="ins__description">Linh hoạt lựa chọn <br>quyền lợi bảo hiểm theo nhu cầu</h6>
-                            </div>
+                            </div>-->
                         </div>
                         <div class="col-md-6 col-lg-6 right_slider__insurance">
                             <div class="form-comf__result">
@@ -1548,7 +1548,90 @@
                                 <formn id="comf_view__result" action="" name="comf_view__result"
                                        class="comf_view__result">
                                     <div class="dropdown ins-dropdown_time adr-dropdown">
-                                        <label for="comf_day" class="insw_label__custom">
+
+                                        <div class="insw_selectbox--holder">
+                                            <div class="insw__select-box">
+                                                <div class="ins__current-choice">
+                                                    <span class="selected-choice">Ngày</span>
+                                                    <input type="hidden" class="hidden" name="ins_select_day">
+                                                    <i class="adr-icon icon-view-menu-down arrow-indicator" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <ul class="ins__choose-list" style="display: none;">
+                                                <li class="ins-choice__value" data-choice="1">1</li>
+                                                <li class="ins-choice__value" data-choice="2">2</li>
+                                                <li class="ins-choice__value" data-choice="3">3</li>
+                                                <li class="ins-choice__value" data-choice="4">4</li>
+                                                <li class="ins-choice__value" data-choice="5">5</li>
+                                                <li class="ins-choice__value" data-choice="6">6</li>
+                                                <li class="ins-choice__value" data-choice="7">7</li>
+                                                <li class="ins-choice__value" data-choice="8">8</li>
+                                                <li class="ins-choice__value" data-choice="9">9</li>
+                                                <li class="ins-choice__value" data-choice="10">10</li>
+                                                <li class="ins-choice__value" data-choice="11">11</li>
+                                                <li class="ins-choice__value" data-choice="12">12</li>
+                                                <li class="ins-choice__value" data-choice="13">13</li>
+                                                <li class="ins-choice__value" data-choice="14">14</li>
+                                                <li class="ins-choice__value" data-choice="15">15</li>
+                                                <li class="ins-choice__value" data-choice="16">16</li>
+                                                <li class="ins-choice__value" data-choice="17">17</li>
+                                                <li class="ins-choice__value" data-choice="18">18</li>
+                                                <li class="ins-choice__value" data-choice="19">19</li>
+                                                <li class="ins-choice__value" data-choice="20">20</li>
+                                                <li class="ins-choice__value" data-choice="21">21</li>
+                                                <li class="ins-choice__value" data-choice="22">22</li>
+                                                <li class="ins-choice__value" data-choice="23">23</li>
+                                                <li class="ins-choice__value" data-choice="24">6</li>
+                                                <li class="ins-choice__value" data-choice="25">25</li>
+                                                <li class="ins-choice__value" data-choice="26">26</li>
+                                                <li class="ins-choice__value" data-choice="27">27</li>
+                                                <li class="ins-choice__value" data-choice="28">28</li>
+                                                <li class="ins-choice__value" data-choice="29">29</li>
+                                                <li class="ins-choice__value" data-choice="30">30</li>
+                                                <li class="ins-choice__value" data-choice="31">31</li>
+                                            </ul>
+                                        </div>
+                                        <div class="insw_selectbox--holder">
+                                            <div class="insw__select-box">
+                                                <div class="ins__current-choice">
+                                                    <span class="selected-choice">Tháng</span>
+                                                    <input type="hidden" class="hidden" name="ins_select_month">
+                                                    <i class="adr-icon icon-view-menu-down arrow-indicator" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <ul class="ins__choose-list" style="display: none;">
+                                                <li class="ins-choice__value" data-choice="1">1</li>
+                                                <li class="ins-choice__value" data-choice="2">2</li>
+                                                <li class="ins-choice__value" data-choice="3">3</li>
+                                                <li class="ins-choice__value" data-choice="4">4</li>
+                                                <li class="ins-choice__value" data-choice="5">5</li>
+                                                <li class="ins-choice__value" data-choice="7">7</li>
+                                                <li class="ins-choice__value" data-choice="8">8</li>
+                                                <li class="ins-choice__value" data-choice="9">9</li>
+                                                <li class="ins-choice__value" data-choice="10">10</li>
+                                                <li class="ins-choice__value" data-choice="11">11</li>
+                                                <li class="ins-choice__value" data-choice="12">12</li>
+                                            </ul>
+                                        </div>
+                                        <div class="insw_selectbox--holder">
+                                            <div class="insw__select-box">
+                                                <div class="ins__current-choice">
+                                                    <span class="selected-choice">Năm</span>
+                                                    <input type="hidden" class="hidden" name="ins_select_year">
+                                                    <i class="adr-icon icon-view-menu-down arrow-indicator" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <ul class="ins__choose-list" style="display: none;">
+                                                <li class="ins-choice__value" data-choice="1994">1994</li>
+                                                <li class="ins-choice__value" data-choice="1995">1995</li>
+                                                <li class="ins-choice__value" data-choice="1996">1996</li>
+                                                <li class="ins-choice__value" data-choice="1997">1997</li>
+                                                <li class="ins-choice__value" data-choice="1998">1998</li>
+                                                <li class="ins-choice__value" data-choice="1999">1999</li>
+                                                <li class="ins-choice__value" data-choice="2000">2000</li>
+                                            </ul>
+                                        </div>
+                                        <!--<label for="comf_day" class="insw_label__custom">
                                             <select id="comf_day" name="comf_day" class="form-control comf_column">
                                                 <option value="">Ngày</option>
                                                 <option value="1">1</option>
@@ -1560,47 +1643,24 @@
                                                 <option value="7">7</option>
                                                 <option value="8">8</option>
                                             </select>
-                                        </label>
-                                        <label for="comf_month" class="insw_label__custom">
-                                            <select id="comf_month" name="comf_month" class="form-control comf_column">
-                                                <option value="">Tháng</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5">5</option>
-                                                <option value="6">6</option>
-                                                <option value="7">7</option>
-                                                <option value="8">8</option>
-                                            </select>
-                                        </label>
-                                        <label for="comf_year" class="insw_label__custom">
-                                            <select id="comf_year" name="comf_year" class="form-control comf_column">
-                                                <option value="">Năm</option>
-                                                <option value="1990">1990</option>
-                                                <option value="1991">1991</option>
-                                                <option value="1992">1992</option>
-                                                <option value="1993">1993</option>
-                                                <option value="1994">1994</option>
-                                                <option value="1995">1995</option>
-                                                <option value="1996">1996</option>
-                                                <option value="1997">1997</option>
-                                            </select>
-                                        </label>
+                                        </label>-->
                                     </div>
-                                    <button type="button" name="conf_show_results" class="conf_show_results">Xem Kết Quả</button>
+                                    <button type="submit" name="conf_show_results" class="conf_show_results">Xem Kết Quả</button>
+                                    <div class="ins_validation_tip_popover">
+                                        Quý khách đã chọn ngày sinh không hợp lệ, vui lòng nhập lại
+                                    </div>
                                 </formn>
                                 <div class="conf_chat_phone">
                                     <div class="conf_phone--hotline">
                                         <div class="conf-need__supports">
-                                            <a href="tel:02848452299" class="ins-conf_bgico"><i class="adr-icon icon-phone"></i></a>
+                                            <a href="tel:02848452299" class="ins-conf_bgico"><i class="adr-icon icon-phone-new"></i></a>
                                             <div class="need_sp_text">
                                                 <span class="need_sp_text_line__1">Bạn cần tư vấn? Hotline</span>
                                                 <span class="need_sp_text_line__2">0284 8452 299</span>
                                             </div>
                                         </div>
                                         <div class="conf-chatnow">
-                                            <a href="#" class="ins-conf_bgico"><i class="adr-icon icon-phone"></i></a>
+                                            <a href="#" class="ins-conf_bgico"><i class="adr-icon icon-message"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -1793,47 +1853,65 @@
                                 <formn id="comf_view__result--float" action="" name="comf_view__result"
                                        class="comf_view__result">
                                     <div class="dropdown ins-dropdown_time adr-dropdown">
-                                        <label for="comf_day_2" class="insw_label__custom">
-                                            <select id="comf_day_2" name="comf_day" class="form-control comf_column">
-                                                <option value="">Ngày</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5">5</option>
-                                                <option value="6">6</option>
-                                                <option value="7">7</option>
-                                                <option value="8">8</option>
-                                            </select>
-                                        </label>
-                                        <label for="comf_month_2" class="insw_label__custom">
-                                            <select id="comf_month_2" name="comf_month" class="form-control comf_column">
-                                                <option value="">Tháng</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5">5</option>
-                                                <option value="6">6</option>
-                                                <option value="7">7</option>
-                                                <option value="8">8</option>
-                                            </select>
-                                        </label>
-                                        <label for="comf_year_2" class="insw_label__custom">
-                                            <select id="comf_year_2" name="comf_year" class="form-control comf_column">
-                                                <option value="">Năm</option>
-                                                <option value="1990">1990</option>
-                                                <option value="1991">1991</option>
-                                                <option value="1992">1992</option>
-                                                <option value="1993">1993</option>
-                                                <option value="1994">1994</option>
-                                                <option value="1995">1995</option>
-                                                <option value="1996">1996</option>
-                                                <option value="1997">1997</option>
-                                            </select>
-                                        </label>
+                                        <div class="insw_selectbox--holder">
+                                            <div class="insw__select-box">
+                                                <div class="ins__current-choice">
+                                                    <span class="selected-choice">Ngày</span>
+                                                    <input type="hidden" class="hidden" name="ins_select_day">
+                                                    <i class="adr-icon icon-view-menu-down arrow-indicator" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <ul class="ins__choose-list" style="display: none;">
+                                                <li class="ins-choice__value" data-choice="1">1</li>
+                                                <li class="ins-choice__value" data-choice="2">2</li>
+                                                <li class="ins-choice__value" data-choice="3">3</li>
+                                                <li class="ins-choice__value" data-choice="4">4</li>
+                                                <li class="ins-choice__value" data-choice="5">5</li>
+                                                <li class="ins-choice__value" data-choice="6">6</li>
+                                            </ul>
+                                        </div>
+                                        <div class="insw_selectbox--holder">
+                                            <div class="insw__select-box">
+                                                <div class="ins__current-choice">
+                                                    <span class="selected-choice">Tháng</span>
+                                                    <input type="hidden" class="hidden" name="ins_select_month">
+                                                    <i class="adr-icon icon-view-menu-down arrow-indicator" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <ul class="ins__choose-list" style="display: none;">
+                                                <li class="ins-choice__value" data-choice="1">1</li>
+                                                <li class="ins-choice__value" data-choice="2">2</li>
+                                                <li class="ins-choice__value" data-choice="3">3</li>
+                                                <li class="ins-choice__value" data-choice="4">4</li>
+                                                <li class="ins-choice__value" data-choice="5">5</li>
+                                                <li class="ins-choice__value" data-choice="6">6</li>
+                                            </ul>
+                                        </div>
+                                        <div class="insw_selectbox--holder">
+                                            <div class="insw__select-box">
+                                                <div class="ins__current-choice">
+                                                    <span class="selected-choice">Năm</span>
+                                                    <input type="hidden" class="hidden" name="ins_select_year">
+                                                    <i class="adr-icon icon-view-menu-down arrow-indicator" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <ul class="ins__choose-list" style="display: none;">
+                                                <li class="ins-choice__value" data-choice="1994">1994</li>
+                                                <li class="ins-choice__value" data-choice="1995">1995</li>
+                                                <li class="ins-choice__value" data-choice="1996">1996</li>
+                                                <li class="ins-choice__value" data-choice="1997">1997</li>
+                                                <li class="ins-choice__value" data-choice="1998">1998</li>
+                                                <li class="ins-choice__value" data-choice="1999">1999</li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <button type="button" name="conf_show_results" class="conf_show_results">Xem Kết Quả</button>
+                                    <div class="conf_container_results">
+                                        <button type="button" name="conf_show_results" class="conf_show_results">Xem Kết Quả</button>
+                                        <div class="ins_validation_tip_popover">
+                                            Quý khách đã chọn ngày sinh không hợp lệ, vui lòng nhập lại
+                                        </div>
+                                    </div>
+
                                 </formn>
                             </div>
                     </div>
@@ -1845,7 +1923,7 @@
                         <div class="row row-eq-height row--knl-columns">
                                 <div class="col-md-3 col-lg-3">
                                     <div class="know__adr-column">
-                                        <a href="#">
+                                        <a href="#" class="know__link">
                                             <i class="adr-icon icon-check-2 icon__know-active"></i>
                                             <b>Tại sao nên mua bảo hiểm sức khỏe?</b>
                                             <span class="knowl-sec_more"><i class="adr-icon icon-next ins_icon--next-q"></i></span>
@@ -1854,7 +1932,7 @@
                                 </div>
                                 <div class="col-md-3 col-lg-3">
                                     <div class="know__adr-column">
-                                        <a href="#">
+                                        <a href="#" class="know__link">
                                             <i class="adr-icon icon-check-2 icon__know-active"></i>
                                             <b>Bảo hiểm sức khỏe và bảo hiểm y tế khác nhau như thế nào?</b>
                                             <span class="knowl-sec_more"><i class="adr-icon icon-next ins_icon--next-q"></i></span>
@@ -1863,7 +1941,7 @@
                                 </div>
                                 <div class="col-md-3 col-lg-3">
                                     <div class="know__adr-column">
-                                        <a href="#">
+                                        <a href="#" class="know__link">
                                             <i class="adr-icon icon-check-2 icon__know-active"></i>
                                             <b>3 điều cần lưu ý trước khi tham gia bảo hiểm sức khỏe</b>
                                             <span class="knowl-sec_more"><i class="adr-icon icon-next ins_icon--next-q"></i></span>
@@ -1872,7 +1950,7 @@
                                 </div>
                                 <div class="col-md-3 col-lg-3">
                                     <div class="know__adr-column">
-                                        <a href="#">
+                                        <a href="#" class="know__link">
                                             <i class="adr-icon icon-check-2 icon__know-active"></i>
                                             <b>Những gì được bảo hiểm và không được bảo hiểm?</b>
                                             <span class="knowl-sec_more"><i class="adr-icon icon-next ins_icon--next-q"></i></span>
