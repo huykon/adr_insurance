@@ -1,0 +1,107 @@
+.ip-fail-warp {
+  background-color: #ffffff;
+  padding: 75px 0 50px;
+  color: #2E3038;
+
+  .ip-fail__inner {
+    figure {
+      margin-bottom: 10px;
+    }
+  }
+  .ip-fail__title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FF7043;
+    margin: 0 0 15px;
+    line-height: 1.5em;
+  }
+  .ip-fail__description {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0 0 25px;
+    line-height: 1.5em;
+  }
+  .ip-fail__btn-return {
+    position: relative;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+    padding: 12px 80px;
+    border-radius: 5px;
+    background: -moz-linear-gradient(90deg, rgba(234,81,44,1) 0%, rgba(229,57,53,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(234,81,44,1) 0%, rgba(229,57,53,1) 100%);
+    background: linear-gradient(90deg, rgba(234,81,44,1) 0%, rgba(229,57,53,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ea512c",endColorstr="#e53935",GradientType=1);
+
+    &:before {
+      position: absolute;
+      top: 50%;
+      left: 15px;
+      font-family: "adr-icon";
+      content: "\e905";
+      font-size: 25px;
+      font-weight: normal;
+      .transform(translateY(-50%));
+    }
+  }
+  .ip-fail__help {
+    position: relative;
+    width: 50%;
+    margin: 35px auto 0;
+    padding: 30px 0;
+
+    &:before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      background-color: #E8EAEE;
+    }
+  }
+  .ip-fail__help-support {
+    .flexbox();
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 -8px;
+  }
+  .ip-fail__help-col-4 {
+    padding: 0 8px;
+    .flex(0 0 33.333333%);
+    max-width: 33.333333%;
+  }
+  .ip-fail__help-support-item {
+    border: 1px solid #E2E4EC;
+    border-radius: 4px;
+    padding: 12px 15px;
+    height: 100%;
+    text-align: left;
+    .flexbox();
+    .align-items(center);
+
+    i {
+      font-size: 22px;
+      margin-right: 15px;
+    }
+  }
+  .ip-fail__help-support-content {
+    .flex(1);
+
+    a {
+      &:hover {
+        color: #2E3038;
+      }
+    }
+    span {
+      display: block;
+      font-size: 13px;
+      color: #8E9098;
+    }
+    strong {
+      display: block;
+      font-size: 16px;
+    }
+  }
+}
