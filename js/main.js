@@ -63,7 +63,7 @@
                 $(this).closest('ul').find('li').removeClass('ins_choiced');
                 $(this).addClass('ins_choiced');
                 $(this).closest($selectHolder).find($selection).text(selectedChoice);
-                $(this).closest($selectHolder).find($choiceList).removeClass('menu-open');
+                /*$(this).closest($selectHolder).find($choiceList).removeClass('menu-open');*/
             });
         });
     }
@@ -78,6 +78,20 @@
         });
     }
 
+    function Adr_Ins_Random_Benefit(){
+        var divs = $('.choose__options-fit').find('.fit_item_ins'),
+            len = divs.length,
+            randomDiv,
+            speed = 500;
+
+        var interval = setInterval(
+            function() {
+                randomDiv = Math.floor(Math.random()*len);
+                divs.removeClass('ins__fit--active');
+                divs.eq(randomDiv).addClass('ins__fit--active');
+            } , speed);
+
+    }
 
     $(document).ready(function () {
         Adr_Ins_Swiper();
@@ -85,5 +99,7 @@
         Adr_Ins_openMenu();
         Adr_Ins_getSelection();
         Adr_Ins_setValue();
+
+        Adr_Ins_Random_Benefit();
     });
 })(jQuery);

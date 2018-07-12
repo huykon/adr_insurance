@@ -159,6 +159,17 @@
 			border-radius: 4px;
 			outline: none;
 			box-shadow: 0 3px 6px 0 rgba(0,0,0,0.15);
+			-webkit-transition: all 0.2s ease 0s;
+			-o-transition: all 0.2s ease, 0s;
+			transition: all 0.2s ease 0s;
+
+			&:hover{
+				background: linear-gradient(90deg, #CD4827 0%, #CA332F 100%);
+			}
+
+			&:focus{
+				background: linear-gradient(90deg, #A93B20 0%, #A62A27 100%);
+			}
 		}
 	}
 
@@ -379,7 +390,12 @@
 .ins-benefit-section{
 	background: #F3F4F6;
 	.ins__row-benefit{
-		background: url("images/banner2.png") no-repeat top left;
+
+		.left__benefit-sec24{
+			img{
+				max-width: 100%;
+			}
+		}
 
 		.ben_container__right{
 			padding: 86px 0 110px 60px;
@@ -413,11 +429,11 @@
 	background: #FFFFFF;
 
 	.ins__row--yfriend{
-		background: url("images/banner3.png") no-repeat top right;
-		padding-top: 64px;
+		/*background: url("images/banner3.png") no-repeat top right;*/
 	}
 
 	.left_choose--benefit{
+		padding-top: 64px;
 		color: #8E9098;
 		font-size: 16px;
 		font-weight: 500;
@@ -482,15 +498,21 @@
 					margin-top: 12px;
 				}
 
-				i.ins-fit__active{
-					position: absolute;
-					right: 8px;
-					top: 8px;
-					width: 24px;
-					height: 24px;
-					font-size: 24px;
-					background: #1CBE55;
-					line-height: 27px;
+				&.ins__fit--active{
+					&::after{
+						content: '\EA5C';
+						font-family: adr-icon;
+						position: absolute;
+						right: 8px;
+						top: 8px;
+						width: 24px;
+						height: 24px;
+						font-size: 24px;
+						background: #1CBE55;
+						line-height: 27px;
+						color: #FFFFFF;
+						border-radius: 50%;
+					}
 				}
 			}
 
@@ -675,7 +697,17 @@
 				border-radius: 4px;
 				position: relative;
 				height: 100%;
-
+				-webkit-transition: all 0.2s ease 0s;
+				-o-transition: all 0.2s ease, 0s;
+				transition: all 0.2s ease 0s;
+				&:hover{
+					border-color: #E53935;
+					
+					.knowl-sec_more i{
+						color: #E53935;
+					}
+				}
+				
 				a.know__link{
 					display: inline-block;
 					height: 100%;
@@ -685,13 +717,14 @@
 				i.icon__know-active{
 					font-size: 42px;
 					color: #E53935;
+					display: block;
 				}
 				b{
 					color: #2E3038;
 					font-size: 18px;
 					line-height: 28px;
 					font-weight: 500;
-					margin-top: 15px;
+					margin-top: 35px;
 					display: inline-block;
 				}
 				.knowl-sec_more{
@@ -755,5 +788,17 @@
 		color: #2E3038;
 		background-color: #F3F4F6;
 		display: inline-block;
+		-webkit-transition: all 0.2s ease 0s;
+		-o-transition: all 0.2s ease, 0s;
+		transition: all 0.2s ease 0s;
+
+		&:hover{
+			background-color: #E8EAEE;
+		}
+
+		&:focus{
+			background-color: #E2E4EC;
+		}
+
 	}
 }
