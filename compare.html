@@ -1534,23 +1534,192 @@
             <!-- Breadcrumb progress bar -->
             <div class="ins-breadcrumb__progressbar">
                 <div class="container">
-                    <ul data-role="navbar" id="checkoutProgress" class="steps-3 row">
+                    <ul data-role="navbar" id="insRegisterProgress" class="steps-1 row">
                         <li class="col-xs-3 active">
-                            <div class="checkout-steps__container"><span class="step-icon"><i class="adr-icon icon-check"></i></span><span class="step-index">1</span><a><span class="visible-xs">So Sánh</span></a></div>
+                            <div class="ins_reg-steps__container"><span class="step-index">1</span><span class="ins__bread-text">So Sánh</span></div>
                         </li>
                         <li class="col-xs-3">
-                            <div class="checkout-steps__container"><span class="step-icon"><i class="adr-icon icon-check"></i></span><span class="step-index">2</span><a><span class="visible-xs">Đăng ký</span></a></div>
+                            <div class="ins_reg-steps__container"><span class="step-index">2</span><span class="ins__bread-text">Đăng ký</span></div>
                         </li>
                         <li class="col-xs-3">
-                            <div class="checkout-steps__container"><span class="step-icon"><i class="adr-icon icon-check"></i></span><span class="step-index">3</span><a><span class="visible-xs">Xem lại</span></a></div>
+                            <div class="ins_reg-steps__container"><span class="step-index">3</span><span class="ins__bread-text">Xem lại</span></div>
                         </li>
                         <li class="col-xs-3">
-                            <div class="checkout-steps__container"><span class="step-icon"><i class="adr-icon icon-check"></i></span><span class="step-index">4</span><a><span class="visible-xs">Thanh toán</span></a></div>
+                            <div class="ins_reg-steps__container"><span class="step-index">4</span><span class="ins__bread-text">Thanh toán</span></div>
                         </li>
                     </ul>
                 </div>
             </div>
             <!-- End Breadcrumb progress bar -->
+
+            <!-- Notify bar -->
+            <div class="ins-notification__bar">
+                <div class="container">
+                    <div class="notify_bar_content">
+                        <span class="notify_text">23 gói bảo hiểm phù hợp với khách hàng <span class="notice_bold">35 tuổi/khách hàng dưới 1 tuổi</span></span>
+                        <button type="button" class="ins__change-age pull-right">Thay đổi độ tuổi</button>
+                    </div>
+                </div>
+            </div>
+            <!-- End Notify bar -->
+
+            <!-- Packages section -->
+            <div id="ins-packages-section" class="container">
+                <div class="ins__nav-tabs--header">
+                    <ul class="nav nav-tabs row ">
+                        <li class="col-md-3 col-lg-3 active"><a href="#ins-package-basic" data-toggle="tab" class="ins-pk-tab_column"><b>Gói Cơ
+                            Bản</b><span>Mức bồi thường đến 200 triệu</span></a></li>
+                        <li class="col-md-3 col-lg-3"><a href="#ins-package-standard" data-toggle="tab" class="ins-pk-tab_column"><b>Gói Tiêu Chuẩn</b><span>Mức bồi thường đến 350 triệu</span></a></li>
+                        <li class="col-md-3 col-lg-3"><a href="#ins-package-full" data-toggle="tab" class="ins-pk-tab_column"><b>Gói Toàn Diện</b><span>Mức bồi thường đến 650 triệu</span></a></li>
+                        <li class="col-md-3 col-lg-3"><a href="#ins-package-premium" data-toggle="tab" class="ins-pk-tab_column"><b>Gói Nâng Cao</b><span>Mức bồi thường đến 1 tỷ</span></a></li>
+                    </ul>
+                </div>
+                <div class="ins__pk_benefit_additional">
+                    <h4>Quyền lợi bổ sung</h4>
+                    <div class="ins__pk_additional_container">
+                        <div class="item ins__fit--active">
+                            <div class="item--content">
+                                <img src="images/nha-khoa.png" alt="Nha khoa">
+                                <span class="item__name">Nha Khoa</span>
+                            </div>
+                        </div>
+                        <div class="item ins__fit--active">
+                            <div class="item--content">
+                                <img src="images/thai-san.png" alt="Thai sản">
+                                <span class="item__name">Thai sản</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item--content">
+                                <img src="images/ngoai-tru.png" alt="Ngoại trú">
+                                <span class="item__name">Ngoại trú</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content row ins__nav-tabs--content">
+                    <div class="tab-pane active" id="ins-package-basic">
+                        <div class="col-md-3 col-lg-3 ">
+                            <div class="ins__pk_main-col">
+                                <div class="pk__main_col--header">
+                                    <img src="images/bao-viet-brand.png" alt="Bảo Việt">
+                                    <h5 class="pk_ansinh">Phúc An Sinh</h5>
+                                    <div class="pk_price">1,670,000đ</div>
+                                    <div class="pk_price_per-year">
+                                        <span class="skike-text">2,000,000đ</span>/Năm
+                                    </div>
+                                    <button type="button" class="pk__btn-register">Đăng ký</button>
+                                    <div class="pk__limit-price">
+                                        <span>50,000,000đ</span>
+                                        Giới hạn quyền lợi chính
+                                    </div>
+                                </div>
+                                <div class="ins_each--item pk__main_col--benefits">
+                                    <h6 class="pk__title">Quyền lợi chính</h6>
+                                    <ul class="ins_content_benefits">
+                                        <li class="ins_bene_line active">
+                                            <span class="adr-icon icon-increase ins_icon--list"></span>
+                                            <div class="ins_col2_ben">
+                                                <span class="pk_text_nor">Thai sản <span class="pull-right">+400,000đ</span></span>
+                                                <b>3.000.000đ/năm</b>
+                                                <span class="pk_text_fee_more">Đồng tri chả 30%</span>
+                                            </div>
+                                        </li>
+                                        <li class="ins_bene_line active">
+                                            <span class="adr-icon icon-increase ins_icon--list"></span>
+                                            <div class="ins_col2_ben">
+                                                <span class="pk_text_nor">Nha khoa <span class="pull-right">Nha khoa</span></span>
+                                                <b>3.000.000đ/năm</b>
+                                                <span class="pk_text_fee_more">Đồng tri chả 30%</span>
+                                            </div>
+                                        </li>
+                                        <li class="ins_bene_line not_available">
+                                            <span class="adr-icon icon-delete ins_icon--list"></span>
+                                            <div class="ins_col2_ben">
+                                                <span class="pk_text_nor">Thai sản</span>
+                                                <span class="pk_text_fee_more">No applicable</span>
+                                            </div>
+                                        </li>
+                                        <li class="ins_bene_line ins_bene_attach">
+                                            <span class="adr-icon icon-check ins_icon--tick"></span>
+                                            <div class="ins_col2_ben">
+                                                <span class="pk_text_nor">Tử vong, Thương tật toàn bộ vĩnh viễn do tai nạn</span>
+                                                <b>50.000.000đ/năm</b>
+                                            </div>
+                                        </li>
+                                        <li class="ins_bene_line ins_bene_attach">
+                                            <span class="adr-icon icon-check ins_icon--tick"></span>
+                                            <div class="ins_col2_ben">
+                                                <span class="pk_text_nor">Nằm viện do ốm, bệnh</span>
+                                                <b>50.000.000đ/năm</b>
+                                            </div>
+                                        </li>
+                                        <li class="ins_bene_line ins_bene_attach">
+                                            <span class="adr-icon icon-check ins_icon--tick"></span>
+                                            <div class="ins_col2_ben">
+                                                <span class="pk_text_nor">Thương tật bộ phận vĩnh viễn do tai nạn</span>
+                                                <b>50.000.000đ/năm</b>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <button type="button" class="ins_benefit--viewmore">Xem thêm</button>
+                                </div>
+                                <div class="ins_each--item pk__main_col--advantage">
+                                    <h6 class="pk__title">Ưu điểm</h6>
+                                    <ul class="ins_content_benefits">
+                                        <li class="ins_bene_line ins_bene_attach">
+                                            <span class="adr-icon icon-check ins_icon--tick"></span>
+                                            <div class="ins_col2_ben">
+                                                <span class="pk_text_nor">Trẻ em dưới 18 tuổi không cần phải mua cùng bố mẹ</span>
+                                            </div>
+                                        </li>
+                                        <li class="ins_bene_line ins_bene_attach">
+                                            <span class="adr-icon icon-check ins_icon--tick"></span>
+                                            <div class="ins_col2_ben">
+                                                <span class="pk_text_nor">Khoản đồng thanh toán không áp dụng cho trẻ em dưới 4 tuổi</span>
+                                            </div>
+                                        </li>
+                                        <li class="ins_bene_line ins_bene_attach">
+                                            <span class="adr-icon icon-check ins_icon--tick"></span>
+                                            <div class="ins_col2_ben">
+                                                <span class="pk_text_nor">Chứng nhận bảo hiểm điện tử</span>
+                                            </div>
+                                        </li>
+                                        <li class="ins_bene_line ins_bene_attach">
+                                            <span class="adr-icon icon-check ins_icon--tick"></span>
+                                            <div class="ins_col2_ben">
+                                                <span class="pk_text_nor">Thanh toán trực tiếp không cần thẻ bảo hiểm</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="ins_each--item pk__main_col--extend">
+                                    <h6 class="pk__title">Quyền lợi mở rộng</h6>
+                                    <ul class="ins_content_benefits">
+                                        <li class="ins_bene_line ins_bene_attach">
+                                            <span class="adr-icon icon-check ins_icon--tick"></span>
+                                            <div class="ins_col2_ben">
+                                                <span class="pk_text_nor">Trẻ em dưới 18 tuổi không cần phải mua cùng bố mẹ</span>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="ins-package-standard">
+                        <h3>Notice the gap between the content and tab after applying a background color</h3>
+                    </div>
+                    <div class="tab-pane" id="ins-package-full">
+                        <h3>add clearfix to tab-content (see the css)</h3>
+                    </div>
+                    <div class="tab-pane" id="ins-package-premium">
+                        <h3>add clearfix to tab-content (see the css)</h3>
+                    </div>
+                </div>
+            </div>
+            <!-- End Packages section -->
 
         </div>
 
