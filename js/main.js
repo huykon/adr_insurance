@@ -148,14 +148,25 @@
         });
     }
 
+    $.fn.equalHeights1 = function(){
+        var max_height = 0;
+        $(this).each(function(){
+            max_height = Math.max($(this).height(), max_height);
+        });
+        $(this).each(function(){
+            $(this).height(max_height);
+        });
+    };
+
     function Adr_Ins_EqualHeight1() {
         $('.ins__package-content').each(function () {
             var dt_max_items = $(this).data('max__items');
             if (typeof dt_max_items !== 'undefined' && dt_max_items > 0) {
                 for (var i = 0; i < dt_max_items; i++) {
-                    $('.ins__equal-item[data-pane_id=' + i + ']').equalHeights();
+                    $('.ins__equal-item[data-pane_id=' + i + ']').equalHeights1();
                 }
             }
+            console.log($('#ins__accordion-detail_11').height());
         });
     }
 
@@ -180,6 +191,6 @@
         Adr_Ins_Showmore();
 
         Adr_Ins_EqualHeight();
-        Ard_Ins_Accordion();
+        //Ard_Ins_Accordion();
     });
 })(jQuery);
