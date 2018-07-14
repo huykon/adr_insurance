@@ -1555,8 +1555,8 @@
             <!-- Notify bar -->
             <div class="ins-notification__bar">
                 <div class="container">
-                    <div class="notify_bar_content">
-                        <span class="notify_text">23 gói bảo hiểm phù hợp với khách hàng <span class="notice_bold">35 tuổi/khách hàng dưới 1 tuổi</span></span>
+                    <div class="alert notify_bar_content">
+                        <span class="notify_text"><span class="number_pk">16</span> gói bảo hiểm phù hợp với khách hàng <span class="old_pk">35</span> tuổi/khách hàng dưới 1 tuổi, chia làm <span class="grade_pk">4</span> hạng</span>
                         <button type="button" class="ins__change-age pull-right">Thay đổi độ tuổi</button>
                     </div>
                 </div>
@@ -1566,113 +1566,85 @@
             <!-- Packages section -->
             <div id="ins-packages-section" class="container">
                 <div class="ins__nav-tabs--header">
-                    <ul class="nav nav-tabs row ">
-                        <li class="col-md-3 col-lg-3 active"><a href="#ins-package-basic" data-toggle="tab" class="ins-pk-tab_column"><b>Gói Cơ
+                    <ul class="nav nav-tabs">
+                        <li class="ins__tab-header active"><a href="#ins-package-basic" data-toggle="tab" class="ins-pk-tab_column"><b>Hạng Cơ
                             Bản</b><span>Mức bồi thường đến 200 triệu</span></a></li>
-                        <li class="col-md-3 col-lg-3"><a href="#ins-package-standard" data-toggle="tab" class="ins-pk-tab_column"><b>Gói Tiêu Chuẩn</b><span>Mức bồi thường đến 350 triệu</span></a></li>
-                        <li class="col-md-3 col-lg-3"><a href="#ins-package-full" data-toggle="tab" class="ins-pk-tab_column"><b>Gói Toàn Diện</b><span>Mức bồi thường đến 650 triệu</span></a></li>
-                        <li class="col-md-3 col-lg-3"><a href="#ins-package-premium" data-toggle="tab" class="ins-pk-tab_column"><b>Gói Nâng Cao</b><span>Mức bồi thường đến 1 tỷ</span></a></li>
+                        <li class="ins__tab-header"><a href="#ins-package-standard" data-toggle="tab" class="ins-pk-tab_column"><b>Hạng Tiêu Chuẩn</b><span>Mức bồi thường đến 350 triệu</span></a></li>
+                        <li class="ins__tab-header"><a href="#ins-package-full" data-toggle="tab" class="ins-pk-tab_column"><b>Hạng Toàn Diện</b><span>Mức bồi thường đến 650 triệu</span></a></li>
+                        <li class="ins__tab-header"><a href="#ins-package-premium" data-toggle="tab" class="ins-pk-tab_column"><b>Hạng Nâng Cao</b><span>Mức bồi thường đến 1 tỷ</span></a></li>
                     </ul>
                 </div>
-                <div class="ins__pk_benefit_additional">
-                    <h4>Quyền lợi bổ sung</h4>
-                    <div class="ins__pk_additional_container">
-                        <div class="item ins__fit--active">
-                            <div class="item--content">
-                                <img src="images/nha-khoa.png" alt="Nha khoa">
-                                <span class="item__name">Nha Khoa</span>
-                            </div>
-                        </div>
-                        <div class="item ins__fit--active">
-                            <div class="item--content">
-                                <img src="images/thai-san.png" alt="Thai sản">
-                                <span class="item__name">Thai sản</span>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="item--content">
-                                <img src="images/ngoai-tru.png" alt="Ngoại trú">
-                                <span class="item__name">Ngoại trú</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="tab-content row ins__nav-tabs--content">
-                    <div class="tab-pane active" id="ins-package-basic">
-                        <div class="col-md-3 col-lg-3 ">
+
+                <div class="tab-content ins__nav-tabs--content">
+                    <div class="tab-pane row ins__package-content active" id="ins-package-basic" data-max__items="5">
+                        <div class="col-xs-12 col-md-3 col-lg-3 ">
                             <div class="ins__pk_main-col">
-                                <div class="pk__main_col--header">
-                                    <img src="images/bao-viet-brand.png" alt="Bảo Việt">
-                                    <h5 class="pk_ansinh">Phúc An Sinh</h5>
-                                    <div class="pk_price">1,670,000đ</div>
+                                <div class="ins__equal-item pk__main_col--header" data-pane_id="0">
+                                    <img src="images/viet-tin-insurance-brand.png" alt="Vietinbank Insurance">
+                                    <h5 class="pk_ansinh">VBI Care - Bạc</h5>
                                     <div class="pk_price_per-year">
-                                        <span class="skike-text">2,000,000đ</span>/Năm
+                                        <b>780.000đ</b>/Năm
+                                    </div>
+                                    <div class="pk_skike_price">
+                                        <span class="skike-price">2,000,000đ</span>
                                     </div>
                                     <button type="button" class="pk__btn-register">Đăng ký</button>
                                     <div class="pk__limit-price">
+                                        Hạn mức tối đa người/năm:
                                         <span>50,000,000đ</span>
-                                        Giới hạn quyền lợi chính
                                     </div>
                                 </div>
-                                <div class="ins_each--item pk__main_col--benefits">
+                                <div class="ins__equal-item ins_each--item pk__main_col--benefits has__view-more" data-pane_id="1">
                                     <h6 class="pk__title">Quyền lợi chính</h6>
-                                    <ul class="ins_content_benefits">
-                                        <li class="ins_bene_line active">
-                                            <span class="adr-icon icon-increase ins_icon--list"></span>
+                                    <ul class="ins_content_benefits" data-item_visible="3">
+                                        <li class="ins_bene_line ins_bene_attach">
+                                            <span class="adr-icon icon-check ins_icon--tick"></span>
                                             <div class="ins_col2_ben">
-                                                <span class="pk_text_nor">Thai sản <span class="pull-right">+400,000đ</span></span>
-                                                <b>3.000.000đ/năm</b>
-                                                <span class="pk_text_fee_more">Đồng tri chả 30%</span>
-                                            </div>
-                                        </li>
-                                        <li class="ins_bene_line active">
-                                            <span class="adr-icon icon-increase ins_icon--list"></span>
-                                            <div class="ins_col2_ben">
-                                                <span class="pk_text_nor">Nha khoa <span class="pull-right">Nha khoa</span></span>
-                                                <b>3.000.000đ/năm</b>
-                                                <span class="pk_text_fee_more">Đồng tri chả 30%</span>
-                                            </div>
-                                        </li>
-                                        <li class="ins_bene_line not_available">
-                                            <span class="adr-icon icon-delete ins_icon--list"></span>
-                                            <div class="ins_col2_ben">
-                                                <span class="pk_text_nor">Thai sản</span>
-                                                <span class="pk_text_fee_more">No applicable</span>
+                                                <span class="pk_text_nor">Chi phí thực tế<br>tối đa 1.250.000/ngày<br> tiền giường tối đa 500.000/ngày<br> tối đa 25.000.000/năm</span>
                                             </div>
                                         </li>
                                         <li class="ins_bene_line ins_bene_attach">
                                             <span class="adr-icon icon-check ins_icon--tick"></span>
                                             <div class="ins_col2_ben">
-                                                <span class="pk_text_nor">Tử vong, Thương tật toàn bộ vĩnh viễn do tai nạn</span>
-                                                <b>50.000.000đ/năm</b>
+                                                <span class="pk_text_nor">Chi phí phẫu thuật: 25.000.000/năm</span>
                                             </div>
                                         </li>
                                         <li class="ins_bene_line ins_bene_attach">
                                             <span class="adr-icon icon-check ins_icon--tick"></span>
                                             <div class="ins_col2_ben">
-                                                <span class="pk_text_nor">Nằm viện do ốm, bệnh</span>
-                                                <b>50.000.000đ/năm</b>
+                                                <span class="pk_text_nor">Tử vong, Thương tật toàn bộ vĩnh viễn do tai nạn: 100.000.000/ năm, chi phí y tế điều trị 10.000.000/năm</span>
                                             </div>
                                         </li>
                                         <li class="ins_bene_line ins_bene_attach">
                                             <span class="adr-icon icon-check ins_icon--tick"></span>
                                             <div class="ins_col2_ben">
-                                                <span class="pk_text_nor">Thương tật bộ phận vĩnh viễn do tai nạn</span>
-                                                <b>50.000.000đ/năm</b>
+                                                <span class="pk_text_nor">Chi phí phẫu thuật: 25.000.000/năm</span>
                                             </div>
                                         </li>
+                                        <li class="ins_bene_line ins_bene_attach">
+                                            <span class="adr-icon icon-check ins_icon--tick"></span>
+                                            <div class="ins_col2_ben">
+                                                <span class="pk_text_nor">Tử vong, Thương tật toàn bộ vĩnh viễn do tai nạn: 100.000.000/ năm, chi phí y tế điều trị 10.000.000/năm</span>
+                                            </div>
+                                        </li>
+
                                     </ul>
                                     <button type="button" class="ins_benefit--viewmore">Xem thêm</button>
                                 </div>
-                                <div class="ins_each--item pk__main_col--advantage">
-                                    <h6 class="pk__title">Ưu điểm</h6>
+                                <div class="ins__equal-item ins_each--item pk__main_col--extend" data-pane_id="2">
+                                    <h6 class="pk__title">Quyền lợi bổ sung</h6>
                                     <ul class="ins_content_benefits">
-                                        <li class="ins_bene_line ins_bene_attach">
-                                            <span class="adr-icon icon-check ins_icon--tick"></span>
+                                        <li class="ins_bene_line not_available">
+                                            <span class="adr-icon icon-delete ins_icon--list"></span>
                                             <div class="ins_col2_ben">
-                                                <span class="pk_text_nor">Trẻ em dưới 18 tuổi không cần phải mua cùng bố mẹ</span>
+                                                <span class="pk_text_fee_more">This plan does not offer extra features</span>
                                             </div>
                                         </li>
+                                    </ul>
+                                </div>
+                                <div class="ins__equal-item ins_each--item pk__main_col--advantage" data-pane_id="3">
+                                    <h6 class="pk__title">Ưu điểm</h6>
+                                    <ul class="ins_content_benefits">
                                         <li class="ins_bene_line ins_bene_attach">
                                             <span class="adr-icon icon-check ins_icon--tick"></span>
                                             <div class="ins_col2_ben">
@@ -1688,21 +1660,431 @@
                                         <li class="ins_bene_line ins_bene_attach">
                                             <span class="adr-icon icon-check ins_icon--tick"></span>
                                             <div class="ins_col2_ben">
-                                                <span class="pk_text_nor">Thanh toán trực tiếp không cần thẻ bảo hiểm</span>
+                                                <span class="pk_text_nor">Chứng nhận bảo hiểm điện tử</span>
                                             </div>
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="ins_each--item pk__main_col--extend">
-                                    <h6 class="pk__title">Quyền lợi mở rộng</h6>
+                                <div class="ins__equal-item ins_each--item pk__main_col--detail-information" data-pane_id="4">
+                                    <h6 class="pk__title">Thông tin chi tiết</h6>
+                                    <div class="panel-group ins_item__accordion" id="ins__accordion-detail_11" role="tablist" aria-multiselectable="true">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="ins_heading_11">
+                                                <a role="button" data-toggle="collapse" data-parent="#ins__accordion-detail_11" href="#ins__collapse_11" aria-expanded="false" aria-controls="collapseOne">
+                                                    <b>Loại trừ</b>
+                                                    <span data-expand="Chi tiết" data-clapse="Thu gọn"></span>
+
+                                                </a>
+                                            </div>
+                                            <div id="ins__collapse_11" class="panel-collapse collapse" role="tabpanel" aria-labelledby="ins_heading_11">
+                                                <div class="panel-body">
+                                                    <ul style="list-style: disc;">
+                                                        <li>Người bị bệnh tâm thần, thần kinh, bệnh phong, thương tật vĩnh viễn quá 50%, đang trong thời gian điều trị bệnh hoặc thương tật.</li>
+                                                        <li>Các điểm loại trừ trong Quy tắc bảo hiểm</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="ins_heading_12">
+                                                <a role="button" data-toggle="collapse" data-parent="#ins__accordion-detail_11" href="#ins__collapse_12" aria-expanded="false" aria-controls="collapseTwo">
+                                                    <b>Thời gian chờ</b>
+                                                    <span data-expand="Chi tiết" data-clapse="Thu gọn"></span>
+                                                </a>
+                                            </div>
+                                            <div id="ins__collapse_12" class="panel-collapse collapse" role="tabpanel" aria-labelledby="ins_heading_12">
+                                                <div class="panel-body">
+                                                    <ul style="list-style: disc;">
+                                                        <li>Người bị bệnh tâm thần, thần kinh, bệnh phong, thương tật vĩnh viễn quá 50%, đang trong thời gian điều trị bệnh hoặc thương tật.</li>
+                                                        <li>Các điểm loại trừ trong Quy tắc bảo hiểm</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <ul class="ins_content_benefits">
+                                        <li class="ins_bene_line">
+                                            <a href="#" download="filename" class="ins__detail--download">Bảng quyền lợi</a>
+                                        </li>
+                                        <li class="ins_bene_line">
+                                            <a href="#" download="filename" class="ins__detail--download">Quy tắc bảo hiểm</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-3 col-lg-3 ">
+                            <div class="ins__pk_main-col">
+                                <div class="ins__equal-item pk__main_col--header" data-pane_id="0">
+                                    <img src="images/pti-brand.png" alt="PTI">
+                                    <h5 class="pk_ansinh">Phúc An Sinh - Bạc</h5>
+                                    <div class="pk_price_per-year">
+                                        <b>1.680.000đ</b>/Năm
+                                    </div>
+                                    <div class="pk_skike_price">
+                                        <span class="skike-price">2,000,000đ</span>
+                                    </div>
+                                    <button type="button" class="pk__btn-register">Đăng ký</button>
+                                    <div class="pk__limit-price">
+                                        Hạn mức tối đa người/năm:
+                                        <span>200.000.000đ</span>
+                                    </div>
+                                </div>
+                                <div class="ins__equal-item ins_each--item pk__main_col--benefits has__view-more" data-pane_id="1">
+                                    <h6 class="pk__title">Quyền lợi chính</h6>
+                                    <ul class="ins_content_benefits" data-item_visible="3">
+                                        <li class="ins_bene_line ins_bene_attach">
+                                            <span class="adr-icon icon-check ins_icon--tick"></span>
+                                            <div class="ins_col2_ben">
+                                                <span class="pk_text_nor">Nằm viện do ốm, bệnh: Chi phí thức tế tối đa 3.000.000/ngày <br>tối đa 60.000.0000/năm</span>
+                                            </div>
+                                        </li>
+                                        <li class="ins_bene_line ins_bene_attach">
+                                            <span class="adr-icon icon-check ins_icon--tick"></span>
+                                            <div class="ins_col2_ben">
+                                                <span class="pk_text_nor">Chi phí phẫu thuật: 60.000.0000/năm</span>
+                                            </div>
+                                        </li>
+                                        <li class="ins_bene_line ins_bene_attach">
+                                            <span class="adr-icon icon-check ins_icon--tick"></span>
+                                            <div class="ins_col2_ben">
+                                                <span class="pk_text_nor">Tử vong, Thương tật toàn bộ vĩnh viễn do tai nạn: 50.000.000/năm, chi phí y tế 10.000.000/năm</span>
+                                            </div>
+                                        </li>
+                                        <li class="ins_bene_line ins_bene_attach">
+                                            <span class="adr-icon icon-check ins_icon--tick"></span>
+                                            <div class="ins_col2_ben">
+                                                <span class="pk_text_nor">Chi phí phẫu thuật: 60.000.0000/năm</span>
+                                            </div>
+                                        </li>
+                                        <li class="ins_bene_line ins_bene_attach">
+                                            <span class="adr-icon icon-check ins_icon--tick"></span>
+                                            <div class="ins_col2_ben">
+                                                <span class="pk_text_nor">Tử vong, Thương tật toàn bộ vĩnh viễn do tai nạn: 50.000.000/năm, chi phí y tế 10.000.000/năm</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <button type="button" class="ins_benefit--viewmore">Xem thêm</button>
+                                </div>
+                                <div class="ins__equal-item ins_each--item pk__main_col--extend" data-pane_id="2">
+                                    <h6 class="pk__title">Quyền lợi bổ sung</h6>
+                                    <ul class="ins_content_benefits">
+                                        <li class="ins_bene_line ins_bene_attach ins_style_ck">
+                                            <input class="ins-styled-checkbox" name="pk_expand2" id="ins-styled-checkbox-31" type="checkbox" value="value2" checked>
+                                            <label for="ins-styled-checkbox-21"></label>
+                                            <div class="ins_col2_ben">
+                                                <span class="pk_text_nor">Subsidies lost income</span>
+                                                <b>18,000,000đ Limit</b>
+                                                <span class="pk_text_fee_more">+1,000,000đ</span>
+                                            </div>
+                                        </li>
+                                        <li class="ins_bene_line ins_bene_attach ins_style_ck">
+                                            <input class="ins-styled-checkbox" name="pk_expand3" id="ins-styled-checkbox-32" type="checkbox" value="value3">
+                                            <label for="ins-styled-checkbox-32"></label>
+                                            <div class="ins_col2_ben">
+                                                <span class="pk_text_nor">Death, permanent disability</span>
+                                                <b>20,000,000đ Limit</b>
+                                                <span class="pk_text_fee_more">+1,000,000đ</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="ins__equal-item ins_each--item pk__main_col--advantage" data-pane_id="3">
+                                    <h6 class="pk__title">Ưu điểm</h6>
                                     <ul class="ins_content_benefits">
                                         <li class="ins_bene_line ins_bene_attach">
                                             <span class="adr-icon icon-check ins_icon--tick"></span>
                                             <div class="ins_col2_ben">
-                                                <span class="pk_text_nor">Trẻ em dưới 18 tuổi không cần phải mua cùng bố mẹ</span>
+                                                <span class="pk_text_nor">Khoản đồng thanh toán không áp dụng cho trẻ em dưới 4 tuổi</span>
+                                            </div>
+                                        </li>
+                                        <li class="ins_bene_line ins_bene_attach">
+                                            <span class="adr-icon icon-check ins_icon--tick"></span>
+                                            <div class="ins_col2_ben">
+                                                <span class="pk_text_nor">Chứng nhận bảo hiểm điện tử</span>
+                                            </div>
+                                        </li>
+                                        <li class="ins_bene_line ins_bene_attach">
+                                            <span class="adr-icon icon-check ins_icon--tick"></span>
+                                            <div class="ins_col2_ben">
+                                                <span class="pk_text_nor">Chứng nhận bảo hiểm điện tử</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="ins__equal-item ins_each--item pk__main_col--detail-information" data-pane_id="4">
+                                    <h6 class="pk__title">Thông tin chi tiết</h6>
+                                    <ul class="ins_content_benefits">
+                                        <li class="ins_bene_line">
+                                            <a href="#" download="filename" class="ins__detail--download">Bảng quyền lợi</a>
+                                        </li>
+                                        <li class="ins_bene_line">
+                                            <a href="#" download="filename" class="ins__detail--download">Quy tắc bảo hiểm</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-3 col-lg-3 ">
+                            <div class="ins__pk_main-col">
+                                <div class="ins__equal-item pk__main_col--header" data-pane_id="0">
+                                    <img src="images/bao-viet-brand.png" alt="Bảo Việt">
+                                    <h5 class="pk_ansinh">Bảo Việt An Gia - Đồng</h5>
+                                    <div class="pk_price_per-year">
+                                        <b>1.315.600đ</b>/Năm
+                                    </div>
+                                    <div class="pk_skike_price">
+                                        <span class="skike-price">2,000,000đ</span>
+                                    </div>
+                                    <button type="button" class="pk__btn-register">Đăng ký</button>
+                                    <div class="pk__limit-price">
+                                        Hạn mức tối đa người/năm:
+                                        <span>120.000.000đ</span>
+                                    </div>
+                                </div>
+                                <div class="ins__equal-item ins_each--item pk__main_col--benefits has__view-more" data-pane_id="1">
+                                    <h6 class="pk__title">Quyền lợi chính</h6>
+                                    <ul class="ins_content_benefits" data-item_visible="3">
+                                        <li class="ins_bene_line ins_bene_attach">
+                                            <span class="adr-icon icon-check ins_icon--tick"></span>
+                                            <div class="ins_col2_ben">
+                                                <span class="pk_text_nor">Nằm viện do ốm, bệnh, tai nạn: Chi phí thức tế tối đa 2.000.000/ngày, không quá 60 ngày/ năm<br> tối đa 40.000.000/năm</span>
+                                            </div>
+                                        </li>
+                                        <li class="ins_bene_line ins_bene_attach">
+                                            <span class="adr-icon icon-check ins_icon--tick"></span>
+                                            <div class="ins_col2_ben">
+                                                <span class="pk_text_nor">Chi phí phẫu thuật: 40.000.0000/năm</span>
+                                            </div>
+                                        </li>
+                                        <li class="ins_bene_line ins_bene_attach">
+                                            <span class="adr-icon icon-check ins_icon--tick"></span>
+                                            <div class="ins_col2_ben">
+                                                <span class="pk_text_nor">Tử vong, Thương tật toàn bộ vĩnh viễn do tai nạn: 50.000.000/năm, chi phí y tế 10.000.000/năm</span>
+                                            </div>
+                                        </li>
+                                        <li class="ins_bene_line ins_bene_attach">
+                                            <span class="adr-icon icon-check ins_icon--tick"></span>
+                                            <div class="ins_col2_ben">
+                                                <span class="pk_text_nor">Chi phí phẫu thuật: 40.000.0000/năm</span>
+                                            </div>
+                                        </li>
+                                        <li class="ins_bene_line ins_bene_attach">
+                                            <span class="adr-icon icon-check ins_icon--tick"></span>
+                                            <div class="ins_col2_ben">
+                                                <span class="pk_text_nor">Tử vong, Thương tật toàn bộ vĩnh viễn do tai nạn: 50.000.000/năm, chi phí y tế 10.000.000/năm</span>
                                             </div>
                                         </li>
 
+                                    </ul>
+                                    <button type="button" class="ins_benefit--viewmore">Xem thêm</button>
+                                </div>
+                                <div class="ins__equal-item ins_each--item pk__main_col--extend" data-pane_id="2">
+                                    <h6 class="pk__title">Quyền lợi bổ sung</h6>
+                                    <ul class="ins_content_benefits">
+                                        <li class="ins_bene_line ins_bene_attach ins_style_ck">
+                                            <input class="ins-styled-checkbox" name="pk_expand1" id="ins-styled-checkbox-1" type="checkbox" value="value1">
+                                            <label for="ins-styled-checkbox-1"></label>
+                                            <div class="ins_col2_ben">
+                                                <b>Mở rộng phạm vi lãnh thổ</b>
+                                                <div class="insw_selectbox--holder">
+                                                    <div class="insw__select-box">
+                                                        <div class="ins__current-choice">
+                                                            <span class="selected-choice">Chọn</span>
+                                                            <input type="hidden" class="hidden" name="ins_select_area">
+                                                            <i class="adr-icon icon-view-menu-down arrow-indicator" aria-hidden="true"></i>
+                                                        </div>
+                                                    </div>
+                                                    <ul class="ins__choose-list" style="display: none;">
+                                                        <li class="ins-choice__value" data-choice="1">1</li>
+                                                        <li class="ins-choice__value" data-choice="2">2</li>
+                                                        <li class="ins-choice__value" data-choice="3">3</li>
+                                                        <li class="ins-choice__value" data-choice="4">4</li>
+                                                        <li class="ins-choice__value" data-choice="5">5</li>
+                                                        <li class="ins-choice__value" data-choice="7">7</li>
+                                                        <li class="ins-choice__value" data-choice="8">8</li>
+                                                        <li class="ins-choice__value" data-choice="9">9</li>
+                                                        <li class="ins-choice__value" data-choice="10">10</li>
+                                                        <li class="ins-choice__value" data-choice="11">11</li>
+                                                        <li class="ins-choice__value" data-choice="12">12</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="ins_bene_line ins_bene_attach ins_style_ck">
+                                            <input class="ins-styled-checkbox" name="pk_expand2" id="ins-styled-checkbox-2" type="checkbox" value="value2" checked>
+                                            <label for="ins-styled-checkbox-2"></label>
+                                            <div class="ins_col2_ben">
+                                                <span class="pk_text_nor">Subsidies lost income</span>
+                                                <b>18,000,000đ Limit</b>
+                                                <span class="pk_text_fee_more">+1,000,000đ</span>
+                                            </div>
+                                        </li>
+                                        <li class="ins_bene_line ins_bene_attach ins_style_ck">
+                                            <input class="ins-styled-checkbox" name="pk_expand3" id="ins-styled-checkbox-3" type="checkbox" value="value3">
+                                            <label for="ins-styled-checkbox-3"></label>
+                                            <div class="ins_col2_ben">
+                                                <span class="pk_text_nor">Death, permanent disability</span>
+                                                <b>20,000,000đ Limit</b>
+                                                <span class="pk_text_fee_more">+1,000,000đ</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="ins__equal-item ins_each--item pk__main_col--advantage" data-pane_id="3">
+                                    <h6 class="pk__title">Ưu điểm</h6>
+                                    <ul class="ins_content_benefits">
+                                        <ul class="ins_content_benefits">
+                                            <li class="ins_bene_line ins_bene_attach">
+                                                <span class="adr-icon icon-check ins_icon--tick"></span>
+                                                <div class="ins_col2_ben">
+                                                    <span class="pk_text_nor">Khoản đồng thanh toán không áp dụng cho trẻ em dưới 4 tuổi</span>
+                                                </div>
+                                            </li>
+                                            <li class="ins_bene_line ins_bene_attach">
+                                                <span class="adr-icon icon-check ins_icon--tick"></span>
+                                                <div class="ins_col2_ben">
+                                                    <span class="pk_text_nor">Chứng nhận bảo hiểm điện tử</span>
+                                                </div>
+                                            </li>
+                                            <li class="ins_bene_line ins_bene_attach">
+                                                <span class="adr-icon icon-check ins_icon--tick"></span>
+                                                <div class="ins_col2_ben">
+                                                    <span class="pk_text_nor">Chứng nhận bảo hiểm điện tử</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </ul>
+                                </div>
+                                <div class="ins__equal-item ins_each--item pk__main_col--detail-information" data-pane_id="4">
+                                    <h6 class="pk__title">Thông tin chi tiết</h6>
+                                    <ul class="ins_content_benefits">
+                                        <li class="ins_bene_line">
+                                            <a href="#" download="filename" class="ins__detail--download">Bảng quyền lợi</a>
+                                        </li>
+                                        <li class="ins_bene_line">
+                                            <a href="#" download="filename" class="ins__detail--download">Quy tắc bảo hiểm</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-3 col-lg-3 ">
+                            <div class="ins__pk_main-col">
+                                <div class="ins__equal-item pk__main_col--header" data-pane_id="0">
+                                    <img src="images/libertymutal-brand.png" alt="Liberty mutal">
+                                    <h5 class="pk_ansinh">Medicare - M1</h5>
+                                    <div class="pk_price_per-year">
+                                        <b>3,153.800đ</b>/Năm
+                                    </div>
+                                    <div class="pk_skike_price">
+                                        <span class="skike-price">2,000,000đ</span>
+                                    </div>
+                                    <button type="button" class="pk__btn-register">Đăng ký</button>
+                                    <div class="pk__limit-price">
+                                        Hạn mức tối đa người/năm:
+                                        <span>93.000.000đ</span>
+                                    </div>
+                                </div>
+                                <div class="ins__equal-item ins_each--item pk__main_col--benefits has__view-more" data-pane_id="1">
+                                    <h6 class="pk__title">Quyền lợi chính</h6>
+                                    <ul class="ins_content_benefits" data-item_visible="3">
+                                        <li class="ins_bene_line ins_bene_attach">
+                                            <span class="adr-icon icon-check ins_icon--tick"></span>
+                                            <div class="ins_col2_ben">
+                                                <span class="pk_text_nor">Tất cả chi phí nằm viện:<br> 120.000.000/năm, tiền phòng và ăn uống 1.000.000/ngày, phòng săn sóc đặc biệt 2.500.000/ngày</span>
+                                            </div>
+                                        </li>
+                                        <li class="ins_bene_line ins_bene_attach">
+                                            <span class="adr-icon icon-check ins_icon--tick"></span>
+                                            <div class="ins_col2_ben">
+                                                <span class="pk_text_nor">Chi phí cấy ghép nội tạng đối với thận, tim, gan và tủy xương: Toàn bộ</span>
+                                            </div>
+                                        </li>
+                                        <li class="ins_bene_line ins_bene_attach">
+                                            <span class="adr-icon icon-check ins_icon--tick"></span>
+                                            <div class="ins_col2_ben">
+                                                <span class="pk_text_nor">Tử vong, Thương tật toàn bộ vĩnh viễn do tai nạn: 50.000.000/năm, chi phí y tế 10.000.000/năm</span>
+                                            </div>
+                                        </li>
+                                        <li class="ins_bene_line ins_bene_attach">
+                                            <span class="adr-icon icon-check ins_icon--tick"></span>
+                                            <div class="ins_col2_ben">
+                                                <span class="pk_text_nor">Chi phí cấy ghép nội tạng đối với thận, tim, gan và tủy xương: Toàn bộ</span>
+                                            </div>
+                                        </li>
+                                        <li class="ins_bene_line ins_bene_attach">
+                                            <span class="adr-icon icon-check ins_icon--tick"></span>
+                                            <div class="ins_col2_ben">
+                                                <span class="pk_text_nor">Tử vong, Thương tật toàn bộ vĩnh viễn do tai nạn: 50.000.000/năm, chi phí y tế 10.000.000/năm</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <button type="button" class="ins_benefit--viewmore">Xem thêm</button>
+                                </div>
+                                <div class="ins__equal-item ins_each--item pk__main_col--extend" data-pane_id="2">
+                                    <h6 class="pk__title">Quyền lợi bổ sung</h6>
+                                    <ul class="ins_content_benefits">
+                                        <li class="ins_bene_line ins_bene_attach ins_style_ck">
+                                            <input class="ins-styled-checkbox" name="pk_expand1" id="ins-styled-checkbox-21" type="checkbox" value="value1">
+                                            <label for="ins-styled-checkbox-21"></label>
+                                            <div class="ins_col2_ben">
+                                                <b>Mở rộng phạm vi lãnh thổ</b>
+                                            </div>
+                                        </li>
+                                        <li class="ins_bene_line ins_bene_attach ins_style_ck">
+                                            <input class="ins-styled-checkbox" name="pk_expand2" id="ins-styled-checkbox-22" type="checkbox" value="value2" checked>
+                                            <label for="ins-styled-checkbox-22"></label>
+                                            <div class="ins_col2_ben">
+                                                <span class="pk_text_nor">Subsidies lost income</span>
+                                                <b>18,000,000đ Limit</b>
+                                                <span class="pk_text_fee_more">+1,000,000đ</span>
+                                            </div>
+                                        </li>
+                                        <li class="ins_bene_line ins_bene_attach ins_style_ck">
+                                            <input class="ins-styled-checkbox" name="pk_expand3" id="ins-styled-checkbox-23" type="checkbox" value="value3">
+                                            <label for="ins-styled-checkbox-23"></label>
+                                            <div class="ins_col2_ben">
+                                                <span class="pk_text_nor">Death, permanent disability</span>
+                                                <b>20,000,000đ Limit</b>
+                                                <span class="pk_text_fee_more">+1,000,000đ</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="ins__equal-item ins_each--item pk__main_col--advantage" data-pane_id="3">
+                                    <h6 class="pk__title">Ưu điểm</h6>
+                                    <ul class="ins_content_benefits">
+                                        <li class="ins_bene_line ins_bene_attach">
+                                            <span class="adr-icon icon-check ins_icon--tick"></span>
+                                            <div class="ins_col2_ben">
+                                                <span class="pk_text_nor">Khoản đồng thanh toán không áp dụng cho trẻ em dưới 4 tuổi</span>
+                                            </div>
+                                        </li>
+                                        <li class="ins_bene_line ins_bene_attach">
+                                            <span class="adr-icon icon-check ins_icon--tick"></span>
+                                            <div class="ins_col2_ben">
+                                                <span class="pk_text_nor">Chứng nhận bảo hiểm điện tử</span>
+                                            </div>
+                                        </li>
+                                        <li class="ins_bene_line ins_bene_attach">
+                                            <span class="adr-icon icon-check ins_icon--tick"></span>
+                                            <div class="ins_col2_ben">
+                                                <span class="pk_text_nor">Chứng nhận bảo hiểm điện tử</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="ins__equal-item ins_each--item pk__main_col--detail-information" data-pane_id="4">
+                                    <h6 class="pk__title">Thông tin chi tiết</h6>
+                                    <ul class="ins_content_benefits">
+                                        <li class="ins_bene_line">
+                                            <a href="#" download="filename" class="ins__detail--download">Bảng quyền lợi</a>
+                                        </li>
+                                        <li class="ins_bene_line">
+                                            <a href="#" download="filename" class="ins__detail--download">Quy tắc bảo hiểm</a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -1711,7 +2093,7 @@
                     <div class="tab-pane" id="ins-package-standard">
                         <h3>Notice the gap between the content and tab after applying a background color</h3>
                     </div>
-                    <div class="tab-pane" id="ins-package-full">
+                    <div class="tab-pane" id="ins-package-full" data-max__items="4">
                         <h3>add clearfix to tab-content (see the css)</h3>
                     </div>
                     <div class="tab-pane" id="ins-package-premium">
@@ -1732,6 +2114,7 @@
 
 <!-- Bootstrap jquery v3.2.0 -->
 <script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.nicescroll.min.js"></script>
 
 <!-- Custom main jquery-->
 <script src="js/main.js"></script>
