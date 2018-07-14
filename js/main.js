@@ -123,7 +123,7 @@
             $(this).closest('.tab-pane').find('.ins_each--item[data-pane_id=' + pane_id + '] li.ins-toggleable').slideDown();
             $(this).closest('.tab-pane').find('.ins_each--item[data-pane_id=' + pane_id + '] button.ins_benefit--viewmore').slideUp();
             $(this).closest('.tab-pane').find('.ins_each--item[data-pane_id=' + pane_id + ']').removeClass('has__view-more');
-            Adr_Ins_EqualHeight();
+            Adr_Ins_EqualHeight('.ins__equal-item');
         });
     }
 
@@ -137,18 +137,18 @@
         });
     };
 
-    function Adr_Ins_EqualHeight() {
+    function Adr_Ins_EqualHeight(item) {
         $('.ins__package-content').each(function () {
             var dt_max_items = $(this).data('max__items');
             if (typeof dt_max_items !== 'undefined' && dt_max_items > 0) {
                 for (var i = 0; i < dt_max_items; i++) {
-                    $('.ins__equal-item[data-pane_id=' + i + ']').equalHeights();
+                    $(item+'[data-pane_id=' + i + ']').equalHeights();
                 }
             }
         });
     }
 
-    $.fn.equalHeights1 = function(){
+    /*$.fn.equalHeights1 = function(){
         var max_height = 0;
         $(this).each(function(){
             max_height = Math.max($(this).height(), max_height);
@@ -168,14 +168,14 @@
             }
             console.log($('#ins__accordion-detail_11').height());
         });
-    }
+    }*/
 
     function Ard_Ins_Accordion(){
         $('.ins_item__accordion').on('show.bs.collapse', function () {
-            Adr_Ins_EqualHeight1();
+            Adr_Ins_EqualHeight('.pk__main_col--detail-information');
         });
         $('.ins_item__accordion').on('hide.bs.collapse', function () {
-            Adr_Ins_EqualHeight1();
+            Adr_Ins_EqualHeight('.pk__main_col--detail-information');
         });
     }
 
@@ -190,7 +190,7 @@
         Adr_Ins_ScrollSelect();
         Adr_Ins_Showmore();
 
-        Adr_Ins_EqualHeight();
-        //Ard_Ins_Accordion();
+        Adr_Ins_EqualHeight('.ins__equal-item');
+        Ard_Ins_Accordion();
     });
 })(jQuery);
