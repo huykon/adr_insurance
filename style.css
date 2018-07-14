@@ -1123,7 +1123,7 @@ Landing Page*/
   line-height: 20px;
 }
 #ins-packages-section .ins__nav-tabs--content .ins__pk_main-col .ins_each--item .ins_item__accordion .panel-default .panel-heading > a span:before {
-  content: attr(data-expand);
+  content: attr(data-clapse);
   padding-right: 19px;
 }
 #ins-packages-section .ins__nav-tabs--content .ins__pk_main-col .ins_each--item .ins_item__accordion .panel-default .panel-heading > a span:after {
@@ -1131,26 +1131,26 @@ Landing Page*/
   color: #A6A8B0;
   font-family: adr-icon;
   font-size: 13px;
-  -webkit-transform: rotate(-90deg);
-  -moz-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
-  -o-transform: rotate(-90deg);
-  transform: rotate(-90deg);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
   display: inline-block;
   position: absolute;
   top: 0;
   right: 0;
 }
 #ins-packages-section .ins__nav-tabs--content .ins__pk_main-col .ins_each--item .ins_item__accordion .panel-default .panel-heading > a.collapsed span:before {
-  content: attr(data-clapse);
+  content: attr(data-expand);
 }
 #ins-packages-section .ins__nav-tabs--content .ins__pk_main-col .ins_each--item .ins_item__accordion .panel-default .panel-heading > a.collapsed span:after {
   content: "\EA07";
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  transform: rotate(90deg);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
 }
 #ins-packages-section .ins__nav-tabs--content .ins__pk_main-col .ins_each--item .ins_item__accordion .panel-default .panel-heading > a:hover {
   color: #2E3038;
