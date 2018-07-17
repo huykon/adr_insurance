@@ -17,11 +17,9 @@
 
     var $selectHolder = $(".insw_selectbox--holder");
     var $select = $(".insw__select-box");
-    var $current_select = $(".ins__current-choice");
     var $choiceList = $("ul.ins__choose-list");
     var $choices = $(".ins-choice__value");
     var $selection = $(".selected-choice");
-    var $chev = $(".arrow-indicator");
     var $hiddenTextField = $(".hidden");
 
     // open menu
@@ -119,12 +117,11 @@
         $('.ins_each--item').on('click', '.ins_benefit--viewmore', function () {
             var pane_id = $(this).closest('.ins_each--item').data('pane_id');
 
-
             if( $(this).hasClass('less') ){
                 $(this).closest('.tab-pane').find('.ins_each--item[data-pane_id=' + pane_id + '] button.ins_benefit--viewmore').text('Xem thêm').removeClass('less');
                 $(this).closest('.tab-pane').find('.ins_each--item[data-pane_id=' + pane_id + ']').removeClass('has__view-more');
             }else{
-                $(this).closest('.tab-pane').find('.ins_each--item[data-pane_id=' + pane_id + '] button.ins_benefit--viewmore').text('Xem ít').addClass('less');
+                $(this).closest('.tab-pane').find('.ins_each--item[data-pane_id=' + pane_id + '] button.ins_benefit--viewmore').text('Đóng lại').addClass('less');
                 $(this).closest('.tab-pane').find('.ins_each--item[data-pane_id=' + pane_id + ']').addClass('has__view-more');
             }
 

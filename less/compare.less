@@ -42,18 +42,24 @@
 				border-left: 12px solid #f2f3f5;
 			}
 
-			&:not(:first-child):not(:last-child):after{
+			&:not(.active):not(:last-child):after{
 				content: '';
 				display: block;
 				position: absolute;
-				top: 7px;
-				right: -9px;
-				width: 33px;
+				top: 0;
+				right: -12px;
 				z-index: 1;
-				transform: rotate(-45deg);
-				height: 33px;
-				border-right: 1px solid #eeeeee;
-				border-bottom: 1px solid #eeeeee;
+				background: url("images/arrow-step.png") no-repeat center center;
+				width: 12px;
+				height: 48px;
+			}
+
+			&:first-child{
+				border-left: 1px solid #BEC0C8;
+			}
+
+			&:last-child{
+				border-right: 1px solid #BEC0C8;
 			}
 
 			&.active{
@@ -72,10 +78,6 @@
 						background-color: #FFFFFF;
 					}
 				}
-			}
-
-			&:last-child{
-				border-right: 1px solid #BEC0C8;
 			}
 
 			.ins_reg-steps__container{
@@ -219,6 +221,9 @@
 
 			.ins__tab-header{
 				margin-right: 10px;
+				-webkit-transition: all 0.2s ease 0s;
+				-o-transition: all 0.2s ease, 0s;
+				transition: all 0.2s ease 0s;
 
 				&:last-child{
 					margin-right: 0;
@@ -229,28 +234,35 @@
 						border-bottom: 1px solid #BEC0C8;
 					}
 				}
-			}
-			.ins-pk-tab_column{
-				padding: 12px 30px;
-				margin: 0;
-				font-size: 13px;
-				font-weight: 400;
-				line-height: 20px;
-				text-align: center;
-				color: #8E9098;
-				border-radius: 4px 4px 0 0;
-				-webkit-transition: all 0.2s ease 0s;
-				-o-transition: all 0.2s ease, 0s;
-				transition: all 0.2s ease 0s;
-				border-top: 4px solid #BEC0C8;
-				background: #F3F4F6;
 
-				b{
-					font-size: 16px;
-					font-weight: 500;
-					line-height: 24px;
-					color: #2E3038;
-					display: block;
+				.ins-pk-tab_column{
+					padding: 12px 30px;
+					margin: 0;
+					font-size: 13px;
+					font-weight: 400;
+					line-height: 20px;
+					text-align: center;
+					color: #8E9098;
+					border-radius: 4px 4px 0 0;
+					-webkit-transition: all 0.2s ease 0s;
+					-o-transition: all 0.2s ease, 0s;
+					transition: all 0.2s ease 0s;
+					border-top: 4px solid #BEC0C8;
+					background: #F3F4F6;
+
+					b{
+						font-size: 16px;
+						font-weight: 500;
+						line-height: 24px;
+						color: #2E3038;
+						display: block;
+					}
+				}
+
+				&:hover{
+					.ins-pk-tab_column{
+						border-top-color: #E53935;
+					}
 				}
 			}
 
@@ -663,6 +675,16 @@
 					line-height: 24px;
 					width: 100%;
 					border-radius: 4px;
+					-webkit-transition: all 0.2s ease 0s;
+					-o-transition: all 0.2s ease, 0s;
+					transition: all 0.2s ease 0s;
+
+					&:hover{
+						background: #E8EAEE;
+					}
+					&:focus,&:active{
+						background: #E2E4EC;
+					}
 				}
 			}
 		}

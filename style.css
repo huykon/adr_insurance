@@ -40,6 +40,9 @@
 .icon-success-new:before {
   content: "\e90c";
 }
+.icon-download-file:before {
+  content: "\ea99";
+}
 /*
 Landing Page*/
 .wrapper-adr-insurance .insw_selectbox--holder {
@@ -744,18 +747,22 @@ Landing Page*/
   border-bottom: 23px solid transparent;
   border-left: 12px solid #f2f3f5;
 }
-.ins-breadcrumb__progressbar ul li:not(:first-child):not(:last-child):after {
+.ins-breadcrumb__progressbar ul li:not(.active):not(:last-child):after {
   content: '';
   display: block;
   position: absolute;
-  top: 7px;
-  right: -9px;
-  width: 33px;
+  top: 0;
+  right: -12px;
   z-index: 1;
-  transform: rotate(-45deg);
-  height: 33px;
-  border-right: 1px solid #eeeeee;
-  border-bottom: 1px solid #eeeeee;
+  background: url("images/arrow-step.png") no-repeat center center;
+  width: 12px;
+  height: 48px;
+}
+.ins-breadcrumb__progressbar ul li:first-child {
+  border-left: 1px solid #BEC0C8;
+}
+.ins-breadcrumb__progressbar ul li:last-child {
+  border-right: 1px solid #BEC0C8;
 }
 .ins-breadcrumb__progressbar ul li.active {
   color: #fff;
@@ -771,9 +778,6 @@ Landing Page*/
 .ins-breadcrumb__progressbar ul li.active .ins_reg-steps__container .step-index {
   color: #E53935;
   background-color: #FFFFFF;
-}
-.ins-breadcrumb__progressbar ul li:last-child {
-  border-right: 1px solid #BEC0C8;
 }
 .ins-breadcrumb__progressbar ul li .ins_reg-steps__container {
   display: inline-block;
@@ -894,6 +898,9 @@ Landing Page*/
 }
 #ins-packages-section .ins__nav-tabs--header .nav-tabs .ins__tab-header {
   margin-right: 10px;
+  -webkit-transition: all 0.2s ease 0s;
+  -o-transition: all 0.2s ease, 0s;
+  transition: all 0.2s ease 0s;
 }
 #ins-packages-section .ins__nav-tabs--header .nav-tabs .ins__tab-header:last-child {
   margin-right: 0;
@@ -901,7 +908,7 @@ Landing Page*/
 #ins-packages-section .ins__nav-tabs--header .nav-tabs .ins__tab-header:not(.active) .ins-pk-tab_column {
   border-bottom: 1px solid #BEC0C8;
 }
-#ins-packages-section .ins__nav-tabs--header .nav-tabs .ins-pk-tab_column {
+#ins-packages-section .ins__nav-tabs--header .nav-tabs .ins__tab-header .ins-pk-tab_column {
   padding: 12px 30px;
   margin: 0;
   font-size: 13px;
@@ -916,12 +923,15 @@ Landing Page*/
   border-top: 4px solid #BEC0C8;
   background: #F3F4F6;
 }
-#ins-packages-section .ins__nav-tabs--header .nav-tabs .ins-pk-tab_column b {
+#ins-packages-section .ins__nav-tabs--header .nav-tabs .ins__tab-header .ins-pk-tab_column b {
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
   color: #2E3038;
   display: block;
+}
+#ins-packages-section .ins__nav-tabs--header .nav-tabs .ins__tab-header:hover .ins-pk-tab_column {
+  border-top-color: #E53935;
 }
 #ins-packages-section .ins__nav-tabs--header .nav-tabs .active .ins-pk-tab_column {
   background: #FFFFFF;
@@ -1279,6 +1289,16 @@ Landing Page*/
   line-height: 24px;
   width: 100%;
   border-radius: 4px;
+  -webkit-transition: all 0.2s ease 0s;
+  -o-transition: all 0.2s ease, 0s;
+  transition: all 0.2s ease 0s;
+}
+#ins-packages-section .ins__nav-tabs--content .ins__pk_main-col .ins_each--item .ins__detail--download:hover {
+  background: #E8EAEE;
+}
+#ins-packages-section .ins__nav-tabs--content .ins__pk_main-col .ins_each--item .ins__detail--download:focus,
+#ins-packages-section .ins__nav-tabs--content .ins__pk_main-col .ins_each--item .ins__detail--download:active {
+  background: #E2E4EC;
 }
 /*IP Fail*/
 .ip-fail-warp {
@@ -1567,6 +1587,11 @@ Landing Page*/
   font-size: 15px;
   font-weight: 500;
   margin-top: 15px;
+}
+@media screen and (max-width: 1023px) {
+  .ins--page-heading.ins_is-sticky {
+    display: none !important;
+  }
 }
 @media screen and (max-width: 639px) {
   .ins-breadcrumb__progressbar ul li .ins_reg-steps__container .step-index {
