@@ -22,7 +22,6 @@
     var $selection = $(".selected-choice");
     var $hiddenTextField = $(".hidden");
 
-    // open menu
     function Adr_Ins_openMenu() {
         $($select).each(function () {
             $(this).on("click", function (e) {
@@ -113,7 +112,6 @@
             }
         });
 
-
         $('.ins_each--item').on('click', '.ins_benefit--viewmore', function () {
             var pane_id = $(this).closest('.ins_each--item').data('pane_id');
 
@@ -124,10 +122,11 @@
                 $(this).closest('.tab-pane').find('.ins_each--item[data-pane_id=' + pane_id + '] button.ins_benefit--viewmore').text('Đóng lại').addClass('less');
                 $(this).closest('.tab-pane').find('.ins_each--item[data-pane_id=' + pane_id + ']').addClass('has__view-more');
             }
+            $(this).closest('.tab-pane').find('.ins_each--item[data-pane_id=' + pane_id + '] li.ins-toggleable').stop().slideToggle(300, function () {
+                Adr_Ins_EqualHeight('.ins__has--view-more', ' data-bene_expand');
+                Adr_Ins_EqualHeight('.ins__equal-item', 'data-pane_id');
+            });
 
-            $(this).closest('.tab-pane').find('.ins_each--item[data-pane_id=' + pane_id + ']').css('height','auto');
-            $(this).closest('.tab-pane').find('.ins_each--item[data-pane_id=' + pane_id + '] li.ins-toggleable').slideToggle();
-            Adr_Ins_EqualHeight('.ins__equal-item', 'data-pane_id');
         });
     }
 
@@ -159,13 +158,14 @@
 
     function Adr_Ins_Accordion(){
         $('.ins_item__accordion').on('shown.bs.collapse', function () {
-            Adr_Ins_EqualHeight('.ins_item__accordion', 'data-ins_accordion');
+            Adr_Ins_EqualHeight('.ins__eq_accordion', 'data-ins_accordion');
             Adr_Ins_EqualHeight('.ins__equal-item', 'data-pane_id');
         });
         $('.ins_item__accordion').on('hidden.bs.collapse', function () {
-            Adr_Ins_EqualHeight('.ins_item__accordion', 'data-ins_accordion');
+            Adr_Ins_EqualHeight('.ins__eq_accordion', 'data-ins_accordion');
             Adr_Ins_EqualHeight('.ins__equal-item', 'data-pane_id');
         });
+
     }
 
     function Adr_Ins_CheckedBenefit(){
@@ -194,8 +194,8 @@
         $('.ins__change-age').on('click', function () {
             var el = $(this),
             parent = el.closest('.notify_bar_content');
-            parent.find('.ins__show_chosen').slideUp(300);
-            parent.find('form.comf_view__result').removeClass('hide');
+            parent.find('.ins__show_chosen').animate({left:'999999px'},350);
+            parent.find('form.comf_view__result').animate({left:'0'},400);
         })
     }
 
@@ -228,8 +228,11 @@
         Adr_Ins_ScrollSelect();
         Adr_Ins_Showmore();
 
-        Adr_Ins_EqualHeight('.ins__equal-item', 'data-pane_id');
         Adr_Ins_EqualHeight('.ins__bor_bottom .ins_bene_line', 'data-ins_bene');
+        Adr_Ins_EqualHeight('.ins__eq_accordion', 'data-ins_accordion');
+        Adr_Ins_EqualHeight('.ins__has--view-more', ' data-bene_expand');
+        Adr_Ins_EqualHeight('.ins__equal-item', 'data-pane_id');
+
         Adr_Ins_Accordion();
 
         Adr_Ins_CheckedBenefit();

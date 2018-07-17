@@ -1,4 +1,19 @@
 /* Style Css */
+@-webkit-keyframes ins_expandline {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  2% {
+    display: block;
+    opacity: 1;
+    transform: scale(0.3);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 /* Font icon */
 @font-face {
   font-family: 'adr-icon';
@@ -766,6 +781,40 @@ Landing Page*/
 .ins-breadcrumb__progressbar ul li:last-child {
   border-right: 1px solid #BEC0C8;
 }
+.ins-breadcrumb__progressbar ul li .ins_reg-steps__container {
+  display: inline-block;
+  line-height: 24px;
+  font-weight: 400;
+  font-size: 15px;
+  color: #2E3038;
+}
+.ins-breadcrumb__progressbar ul li .ins_reg-steps__container .step-icon,
+.ins-breadcrumb__progressbar ul li .ins_reg-steps__container .step-index {
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  text-align: center;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 500;
+  display: inline-block;
+  float: left;
+  margin-right: 16px;
+  background-color: #F3F4F6;
+}
+.ins-breadcrumb__progressbar ul li .ins_reg-steps__container .step-icon {
+  background-color: #E53935;
+  position: relative;
+  display: none;
+}
+.ins-breadcrumb__progressbar ul li .ins_reg-steps__container .step-icon .adr-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
 .ins-breadcrumb__progressbar ul li.active {
   color: #fff;
   background-color: #E53935;
@@ -781,25 +830,11 @@ Landing Page*/
   color: #E53935;
   background-color: #FFFFFF;
 }
-.ins-breadcrumb__progressbar ul li .ins_reg-steps__container {
+.ins-breadcrumb__progressbar ul li.done .ins_reg-steps__container .step-icon {
   display: inline-block;
-  line-height: 24px;
-  font-weight: 400;
-  font-size: 15px;
-  color: #2E3038;
 }
-.ins-breadcrumb__progressbar ul li .ins_reg-steps__container .step-index {
-  width: 24px;
-  height: 24px;
-  border-radius: 100%;
-  text-align: center;
-  font-size: 14px;
-  line-height: 24px;
-  font-weight: 500;
-  display: inline-block;
-  float: left;
-  margin-right: 16px;
-  background-color: #F3F4F6;
+.ins-breadcrumb__progressbar ul li.done .ins_reg-steps__container .step-index {
+  display: none;
 }
 .ins-notification__bar .notify_bar_content {
   background-color: #F3F4F6;
@@ -812,10 +847,35 @@ Landing Page*/
   margin: 0;
   width: 100%;
 }
+.ins-notification__bar .notify_bar_content .ins_notice__wrapper {
+  min-height: 34px;
+  position: relative;
+}
+.ins-notification__bar .notify_bar_content .ins__show_chosen {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 100%;
+}
 .ins-notification__bar .notify_bar_content form.comf_view__result {
   display: flex;
+  width: 100%;
   justify-content: flex-start;
   align-items: center;
+  position: absolute;
+  left: -9999px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 9;
 }
 .ins-notification__bar .notify_bar_content form.comf_view__result .comf__result--date {
   font-size: 14px;
@@ -1023,7 +1083,7 @@ Landing Page*/
   position: relative;
 }
 #ins-packages-section .ins__nav-tabs--content .ins__pk_main-col .ins_each--item.has__view-more .ins_content_benefits {
-  margin-bottom: 35px;
+  margin-bottom: 16px;
 }
 #ins-packages-section .ins__nav-tabs--content .ins__pk_main-col .ins_each--item .pk__title {
   margin: 0;
@@ -1033,6 +1093,13 @@ Landing Page*/
   font-size: 14px;
   font-weight: 500;
   line-height: 22px;
+}
+#ins-packages-section .ins__nav-tabs--content .ins__pk_main-col .ins_each--item .ins__has--view-more {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
 }
 #ins-packages-section .ins__nav-tabs--content .ins__pk_main-col .ins_each--item ul.ins_content_benefits {
   list-style: none;
@@ -1145,6 +1212,10 @@ Landing Page*/
 #ins-packages-section .ins__nav-tabs--content .ins__pk_main-col .ins_each--item ul.ins_content_benefits li.ins_style_ck .insw_selectbox--holder {
   margin: 6px 0 0;
 }
+#ins-packages-section .ins__nav-tabs--content .ins__pk_main-col .ins_each--item ul.ins_content_benefits li.ins_style_ck .insw_selectbox--holder .ins__choose-list li {
+  padding: 12px 30px 12px 22px;
+  border: 0;
+}
 #ins-packages-section .ins__nav-tabs--content .ins__pk_main-col .ins_each--item ul.ins_content_benefits li.ins_style_ck .ins_col2_ben .pk_text_fee_more {
   display: none;
 }
@@ -1212,23 +1283,26 @@ Landing Page*/
 #ins-packages-section .ins__nav-tabs--content .ins__pk_main-col .ins_each--item ul.ins_content_benefits.ins__bor_bottom li .ins__bene--child:not(:first-child) {
   margin-top: 16px;
 }
-#ins-packages-section .ins__nav-tabs--content .ins__pk_main-col .ins_each--item button.ins_benefit--viewmore {
-  position: absolute;
-  bottom: 16px;
-  left: 50%;
-  display: block;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  transform: translateX(-50%);
+#ins-packages-section .ins__nav-tabs--content .ins__pk_main-col .ins_each--item button.ins_benefit--viewmore:focus {
+  background: #FFFFFF;
+}
+#ins-packages-section .ins__nav-tabs--content .ins__pk_main-col .ins_each--item .ins__eq_accordion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+#ins-packages-section .ins__nav-tabs--content .ins__pk_main-col .ins_each--item .ins__eq_accordion .ins_content_benefits {
+  width: 100%;
+  border-top: 1px solid #E8EAEE;
 }
 #ins-packages-section .ins__nav-tabs--content .ins__pk_main-col .ins_each--item .ins_item__accordion {
   padding: 16px;
   color: #2E3038;
   background: transparent;
-  border-bottom: 1px solid #E8EAEE;
   margin: 0;
+  width: 100%;
 }
 #ins-packages-section .ins__nav-tabs--content .ins__pk_main-col .ins_each--item .ins_item__accordion .panel-default {
   border: 0;
