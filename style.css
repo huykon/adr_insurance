@@ -192,7 +192,8 @@ Landing Page*/
 .wrapper-adr-insurance .btn_ins-primary:hover {
   background: linear-gradient(90deg, #CD4827 0%, #CA332F 100%);
 }
-.wrapper-adr-insurance .btn_ins-primary:focus {
+.wrapper-adr-insurance .btn_ins-primary:focus,
+.wrapper-adr-insurance .btn_ins-primary:active {
   background: linear-gradient(90deg, #A93B20 0%, #A62A27 100%);
 }
 .wrapper-adr-insurance .btn_ins-secondary {
@@ -214,7 +215,8 @@ Landing Page*/
   background: #E8EAEE;
   border-color: #8E9098;
 }
-.wrapper-adr-insurance .btn_ins-secondary:focus {
+.wrapper-adr-insurance .btn_ins-secondary:focus,
+.wrapper-adr-insurance .btn_ins-secondary:active {
   background-color: #E2E4EC;
 }
 .ins-slider-container {
@@ -1162,6 +1164,22 @@ Landing Page*/
   font-weight: 500;
   line-height: 22px;
 }
+#ins-packages-section .ins__nav-tabs--content .ins__pk_main-col .ins_each--item ul.ins_content_benefits li.not_available .ins_col2_ben .pk__fee--title {
+  color: #8E9098;
+}
+#ins-packages-section .ins__nav-tabs--content .ins__pk_main-col .ins_each--item ul.ins_content_benefits li.not_available .ins_col2_ben .pk__fee-price_additional {
+  font-weight: 400;
+  line-height: 20px;
+  font-size: 13px;
+}
+#ins-packages-section .ins__nav-tabs--content .ins__pk_main-col .ins_each--item ul.ins_content_benefits li.not_available.ins_style_ck input[type="checkbox"] + label:before,
+#ins-packages-section .ins__nav-tabs--content .ins__pk_main-col .ins_each--item ul.ins_content_benefits li.not_available.ins_style_ck input[type="checkbox"]:hover + label:before {
+  background: #F3F4F6;
+  border: 2px solid #E8EAEE;
+}
+#ins-packages-section .ins__nav-tabs--content .ins__pk_main-col .ins_each--item ul.ins_content_benefits li.not_available.ins_style_ck input[type="checkbox"]:focus + label:before {
+  box-shadow: none;
+}
 #ins-packages-section .ins__nav-tabs--content .ins__pk_main-col .ins_each--item ul.ins_content_benefits li .ins__bene--child {
   display: flex;
   align-items: flex-start;
@@ -1282,16 +1300,18 @@ Landing Page*/
 #ins-packages-section .ins__nav-tabs--content .ins__pk_main-col .ins_each--item .ins__detail--download {
   background: #F3F4F6;
   outline: none;
-  padding: 12px 16px;
+  padding: 8px 16px;
   color: #2E3038;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 22px;
   width: 100%;
   border-radius: 4px;
   -webkit-transition: all 0.2s ease 0s;
   -o-transition: all 0.2s ease, 0s;
   transition: all 0.2s ease 0s;
+  display: flex;
+  align-items: center;
 }
 #ins-packages-section .ins__nav-tabs--content .ins__pk_main-col .ins_each--item .ins__detail--download:hover {
   background: #E8EAEE;
@@ -1299,6 +1319,10 @@ Landing Page*/
 #ins-packages-section .ins__nav-tabs--content .ins__pk_main-col .ins_each--item .ins__detail--download:focus,
 #ins-packages-section .ins__nav-tabs--content .ins__pk_main-col .ins_each--item .ins__detail--download:active {
   background: #E2E4EC;
+}
+#ins-packages-section .ins__nav-tabs--content .ins__pk_main-col .ins_each--item .ins__detail--download i.adr-ins_dowload {
+  font-size: 24px;
+  margin-right: 16px;
 }
 /*IP Fail*/
 .ip-fail-warp {

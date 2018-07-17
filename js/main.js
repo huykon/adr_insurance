@@ -132,31 +132,16 @@
     }
 
     $.fn.Ins_equalHeights = function(o){
-        /*var selector = this;
-        var heights = [];
-
-        selector.each(function(){
-            var height = $(this).height();
-            heights.push(height);
-        });
-
-        var maxHeight = Math.max.apply(null, heights);
-        console.log(heights,maxHeight);
-
-        selector.each(function(){
-            $(this).height(maxHeight);
-        });*/
-
         var s = $.extend({
             mobile: 767 // Mobile breakpoint
         },o);
-        var w = Math.max(document.documentElement.clientWidth,window.innerWidth || 0); // Get the viewport width
-        this.css('height','auto'); // Make sure an explicit height isn't declared
-        if(w > s.mobile){ // If we're NOT on a mobile
-            var h = 0; // Initialize height variable
-            this.each(function(){ // For each matched element...
-                h = Math.max(h,$(this).outerHeight()); // Set h equal to its height, if it's taller than h
-            }).css('height',h); // Set all matched elements' height equal to h
+        var w = Math.max(document.documentElement.clientWidth,window.innerWidth || 0);
+        this.css('height','auto');
+        if(w > s.mobile){
+            var h = 0;
+            this.each(function(){
+                h = Math.max(h,$(this).outerHeight());
+            }).css('height',h);
         }
         return this;
     };
