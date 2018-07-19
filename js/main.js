@@ -27,19 +27,16 @@
             $(this).on("click", function (e) {
                 var menuDropdown = $(this).closest($selectHolder).find($choiceList);
                 var nstyle = menuDropdown.css('display');
-                //menuDropdown.addClass('menu-open');
                 if (nstyle == "none") {
                     menuDropdown.slideDown(100, function () {
                         $("html").bind("click", function (e) {
                             if (!$(this).is(e.target) && !menuDropdown.is(e.target) && menuDropdown.has(e.target).length == 0) {
                                 menuDropdown.slideUp(100);
-                                // menuDropdown.removeClass('menu-open');
                                 $("html").unbind("click");
                             }
                         });
                     })
                 }
-                //$(this).closest($selectHolder).find($choiceList).toggleClass('menu-open');
             });
 
         });
@@ -53,7 +50,6 @@
                 $(this).closest('ul').find('li').removeClass('ins_choiced');
                 $(this).addClass('ins_choiced');
                 $(this).closest($selectHolder).find($selection).text(selectedChoice);
-                /*$(this).closest($selectHolder).find($choiceList).removeClass('menu-open');*/
             });
         });
     }
@@ -91,6 +87,18 @@
                 cursorborder: "1px solid #d6d8e0",
                 cursorborderradius: 0,
                 cursorfixedheight: 128,
+                cursoropacitymax: 1,
+                boxzoom: false,
+                autohidemode: true,
+                touchbehavior: true
+            });
+
+            $('.ins_show_case_area').niceScroll({
+                cursorcolor: "#D6D8E0",
+                cursorwidth: "8px",
+                cursorborder: "1px solid #d6d8e0",
+                cursorborderradius: 0,
+                cursorfixedheight: 95,
                 cursoropacitymax: 1,
                 boxzoom: false,
                 autohidemode: true,
@@ -216,9 +224,150 @@
         }
     }
 
+    function Adr_Ins_DatePicker(){
+        if (typeof $.fn.datepicker == 'function'){
+
+            $.fn.datepicker.dates['vi'] = {
+                days: ["Chủ Nhật", "Thứ 2", "Thứ 3", "Thứ 4", "Thứ 5", "Thứ 6", "Thứ 7"],
+                daysShort: ["CN","Thứ 2","Thứ 3","Thứ 4","Thứ 5","Thứ 6","Thứ 7"],
+                daysMin: ["CN","T2","T3","T4","T5","T6","T7"],
+                months: ["Tháng 1","Tháng 2","Tháng 3","Tháng 4","Tháng 5","Tháng 6","Tháng 7","Tháng 8","Tháng 9","Tháng 10","Tháng 11","Tháng 12"],
+                monthsShort: ["Th1","Th2","Th3","Th4","Th5","Th6","Th7","Th8","Th9","Th10","Th11","Th12"],
+                today: "Hôm nay",
+                clear: "Xoá",
+                format: "dd/mm/yyyy",
+                titleFormat: "MM yyyy", /* Leverages same syntax as 'format' */
+                weekStart: 0
+            };
+
+            $('.ins__input--date-picker.input-group.date').datepicker({
+                todayHighlight: true,
+                language: 'vi',
+                templates: {
+                    leftArrow: '<i class="adr-icon icon-arrow-left-sm"></i>',
+                    rightArrow: '<i class="adr-icon icon-arrow-right-sm"></i>'
+                }
+            });
+
+            $('.ins__input--date-picker.input-group.date.ins__for_plc_startdate').datepicker().on('changeDate', function (ev) {
+                $(this).find('input[name="ins_policy_start_date"]').on('change', function () {
+                    var date_val = $(this).val();
+                    if (date_val){
+                        $(this).closest('.rev__right-col').find('.rev_field_base_date').removeClass('hidden');
+                    }else{
+                        $(this).closest('.rev__right-col').find('.rev_field_base_date').addClass('hidden');
+                    }
+                });
+            });
+
+        }
+    }
+
+    function Adr_Ins_CloseUpload(){
+        $('.ins__rev_close').on('click', function (e) {
+            var $el = $(this),
+                parent = $el.closest('.ins__field-uploads');
+            parent.find('.ins__form-file--label').removeClass('hidden');
+            parent.find('.ins__response-area').addClass('hidden');
+        })
+    }
+
+    function Adr_Ins_CloneRowTB(){
+        $('.ins__tb-showcase').each(function () {
+            var that = $(this),
+                count_tr = that.find('table.ins_table-shc tbody tr').length;
+
+            $(".ins__btn--add-case").on('click', function () {
+
+                var $el = $(this),
+                    $table = $el.closest('.ins__tb-showcase'),
+                    $clone = $table.find('table.ins_table-shc tbody tr:first').clone();
+
+                $clone.attr({
+                    id: count_tr
+                });
+
+                /*$clone.find("input,select").each(function(){
+                    $(this).attr({
+                        id: $(this).attr("id") + count,
+                        name: $(this).attr("name") + count
+                    });
+                });*/
+
+                $table.find('table.ins_table-shc tbody').append($clone);
+            })
+        })
+    }
+
+    function Adr_Ins_ConditionShow(input_name, parent, find, compare) {
+        if ($('input[name="'+input_name+'"]').length) {
+            var value = $('input[name="'+input_name+'"]:checked').val();
+            if (value == compare) {
+                $('input[name="'+input_name+'"]').closest(parent).find(find).removeClass('hidden');
+            } else {
+                $('input[name="'+input_name+'"]').closest(parent).find(find).addClass('hidden');
+            }
+        }
+
+        $('input[name="'+input_name+'"]').on('change', function () {
+            var value = $(this).val();
+            if (value == compare) {
+                $(this).closest(parent).find(find).removeClass('hidden');
+            } else {
+                $(this).closest(parent).find(find).addClass('hidden');
+            }
+        });
+    }
+
+    function Adr_Ins_ShowSamePolicy(){
+
+        var fullName = ($('input[name="policy_holder_fullname"]').length) ? $('input[name="policy_holder_fullname"]').val() : '';
+        var dateOfBirth = ($('input[name="policy_holder_dateofbirth"]').length) ? $('input[name="policy_holder_dateofbirth"]').val() : '';
+        var idPassPort = ($('input[name="policy_holder_idpassport"]').length) ? $('input[name="policy_holder_idpassport"]').val() : '';
+        var fullNameSame = $('input[name="policy_holder_fullname_same"]');
+        var dateOfBirthSame = $('input[name="policy_holder_dateofbirth_same"]');
+        var idPassPortSame = $('input[name="policy_holder_idpassport_same"]');
+
+        if ($('#same_as_policy_holder').prop('checked')) {
+            fullNameSame.val(fullName);
+            dateOfBirthSame.val(dateOfBirth);
+            idPassPortSame.val(idPassPort);
+            $('#same_as_policy_holder:checked').closest('.ins__holder_same').find('.ins_group-fields input').attr("disabled", true);
+        } else {
+            fullNameSame.val('');
+            dateOfBirthSame.val('');
+            idPassPortSame.val('');
+            $('#same_as_policy_holder:checked').closest('.ins__holder_same').find('.ins_group-fields input').attr("disabled", false);
+        }
+
+        $('#same_as_policy_holder').on('change', function () {
+            var fullName = ($('input[name="policy_holder_fullname"]').length) ? $('input[name="policy_holder_fullname"]').val() : '';
+            var dateOfBirth = ($('input[name="policy_holder_dateofbirth"]').length) ? $('input[name="policy_holder_dateofbirth"]').val() : '';
+            var idPassPort = ($('input[name="policy_holder_idpassport"]').length) ? $('input[name="policy_holder_idpassport"]').val() : '';
+            var fullNameSame = $('input[name="policy_holder_fullname_same"]');
+            var dateOfBirthSame = $('input[name="policy_holder_dateofbirth_same"]');
+            var idPassPortSame = $('input[name="policy_holder_idpassport_same"]');
+
+            if ($(this).prop('checked')) {
+                fullNameSame.val(fullName);
+                dateOfBirthSame.val(dateOfBirth);
+                idPassPortSame.val(idPassPort);
+                $(this).closest('.ins__holder_same').find('.ins_group-fields input').attr("disabled", true);
+            } else {
+                fullNameSame.val('');
+                dateOfBirthSame.val('');
+                idPassPortSame.val('');
+                $(this).closest('.ins__holder_same').find('.ins_group-fields input').attr("disabled", false);
+            }
+        });
+    }
+
+
+
     $(document).ready(function () {
 
         Adr_Ins_Swiper();
+        Adr_Ins_DatePicker();
 
         Adr_Ins_openMenu();
         Adr_Ins_getSelection();
@@ -241,12 +390,135 @@
         Adr_Ins_ChangeOld();
 
         Adr_Ins_StickThis();
+        Adr_Ins_CloseUpload();
 
+        Adr_Ins_CloneRowTB();
+
+        Adr_Ins_ConditionShow('reject_insurance','.rev_flex-box--right','textarea','1');
+        Adr_Ins_ConditionShow('check_insured','.row-full-field','.ins__tb-showcase','1');
+
+        Adr_Ins_ShowSamePolicy();
     });
 
     $(window).on('resize', function(){
         Adr_Ins_StickThis();
-
     });
 
 })(jQuery);
+
+
+// File Upload
+function Adr_Ins_Upload(){
+    function Adr_Ins_UF_Init() {
+
+        var fileSelect    = document.getElementById('ins__upload-certificate'),
+            fileDrag      = document.getElementById('ins__upload-file-drag');
+
+        fileSelect.addEventListener('change', Adr_Ins_UF_fileSelectHandler, false);
+
+        // Is XHR2 available?
+        var xhr = new XMLHttpRequest();
+        if (xhr.upload) {
+            // File Drop
+            fileDrag.addEventListener('dragover', Adr_Ins_UF_fileDragHover, false);
+            fileDrag.addEventListener('dragleave', Adr_Ins_UF_fileDragHover, false);
+            fileDrag.addEventListener('drop', Adr_Ins_UF_fileSelectHandler, false);
+        }
+    }
+
+    function Adr_Ins_UF_fileDragHover(e) {
+        var fileDrag = document.getElementById('ins__upload-area-start');
+
+        e.stopPropagation();
+        e.preventDefault();
+
+        if (e.type === 'dragover'){
+            fileDrag.setAttribute('data-hover','1');
+        }else{
+            fileDrag.removeAttribute('data-hover');
+        }
+    }
+
+    function Adr_Ins_UF_fileSelectHandler(e) {
+        // Fetch FileList object
+        var files = e.target.files || e.dataTransfer.files;
+
+        // Cancel event and hover styling
+        Adr_Ins_UF_fileDragHover(e);
+
+        // Process all File objects
+        for (var i = 0, f; f = files[i]; i++) {
+            Adr_Ins_UF_parseFile(f);
+            Adr_Ins_UF_uploadFile(f);
+        }
+    }
+
+    // Output
+    function Adr_Ins_UF_output(msg) {
+        // Response
+        var m = document.getElementById('ins__upload-messages');
+        m.innerHTML = msg;
+    }
+
+    function Adr_Ins_UF_parseFile(file) {
+
+        Adr_Ins_UF_output(
+            '<span>' + encodeURI(file.name) + '</span>'
+        );
+
+        var imageName = file.name,
+            isGood = (/\.(?=gif|jpg|png|jpeg)/gi).test(imageName);
+        if (isGood) {
+            document.getElementById('ins__upload-file-drag').classList.add("hidden");
+            document.getElementById('ins__upload-response').classList.remove("hidden");
+            document.getElementById('ins__upload-notimage').classList.add("hidden");
+            // Thumbnail Preview
+            document.getElementById('ins__upload-file-image').classList.remove("hidden");
+            document.getElementById('ins__upload-file-image').src = URL.createObjectURL(file);
+        }
+        else {
+            document.getElementById('ins__upload-file-image').classList.add("hidden");
+            document.getElementById('ins__upload-notimage').classList.remove("hidden");
+            document.getElementById('ins__upload-file-drag').classList.remove("hidden");
+            document.getElementById('ins__upload-response').classList.add("hidden");
+        }
+    }
+
+    function Adr_Ins_UF_uploadFile(file) {
+        var xhr = new XMLHttpRequest(),
+            fileInput = document.getElementById('class-roster-file'),
+            fileSizeLimit = 5; // In MB
+        if (xhr.upload) {
+            if (file.size <= fileSizeLimit * 1024 *1024) {
+
+                // File received / failed
+                xhr.onreadystatechange = function(e) {
+                    if (xhr.readyState == 4) {
+                        // Everything is good!
+
+                        // progress.className = (xhr.status == 200 ? "success" : "failure");
+                        // document.location.reload(true);
+                    }
+                };
+
+                // Start upload
+                xhr.open('POST', document.getElementsByClassName('adr-insurance-form').action, true);
+                xhr.setRequestHeader('X-File-Name', file.name);
+                xhr.setRequestHeader('X-File-Size', file.size);
+                xhr.setRequestHeader('Content-Type', 'multipart/form-data');
+                xhr.send(file);
+            } else {
+                Adr_Ins_UF_output('Vui lòng upload file nhỏ hơn (< ' + fileSizeLimit + ' MB).');
+            }
+        }
+    }
+
+    // Check for the various File API support.
+    if (window.File && window.FileList && window.FileReader) {
+        Adr_Ins_UF_Init();
+    } else {
+        document.getElementById('ins__upload-file-drag').style.display = 'none';
+    }
+}
+
+Adr_Ins_Upload();
