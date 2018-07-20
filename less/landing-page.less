@@ -1,9 +1,10 @@
 .wrapper-adr-insurance{
-
+	position: relative;
 	.insw_selectbox--holder{
 		position: relative;
 		width: 100%;
 		margin: 0 4px;
+
 		&:first-child{
 			margin-left: 0;
 		}
@@ -95,6 +96,15 @@
 
 			&.menu-open{
 				display: block;
+			}
+		}
+
+		&.disabled{
+			cursor: not-allowed;
+			background-color: #eee;
+			pointer-events: none;
+			.insw__select-box{
+				background-color: #eee;
 			}
 		}
 	}
@@ -431,6 +441,33 @@
 		}
 	}
 
+	.ins-adr__chat-online{
+		cursor: pointer;
+		position: fixed;
+		right: 16px;
+		bottom: 16px;
+		background-color: #2283F7;
+		border-radius: 512px;
+		display: flex;
+		color: #FFFFFF;
+		align-items: center;
+		.chat-icon{
+			background-color: rgba(0, 0, 0, 0.22);
+			padding: 10px;
+			border-radius: 50%;
+			.icon-message{
+				font-size: 24px;
+				color: #FFFFFF;
+			}
+		}
+		.chat-text{
+			margin-left: 18px;
+			margin-right: 24px;
+			font-size: 15px;
+			font-weight: 500;
+			line-height: 24px;
+		}
+	}
 }
 
 .ins-slider-container{
@@ -507,56 +544,51 @@
 			display: inline-block;
 			width: 100%;
 
-			.conf_phone--hotline{
-				display: flex;
-				justify-content: space-between;
+			.ins-conf_bgico{
+				background: #F3F4F6;
+				width: 48px;
+				height: 48px;
+				border-radius: 50%;
+				line-height: 48px;
+				text-align: center;
+				display: inline-block;
 
-				.ins-conf_bgico{
-					background: #F3F4F6;
-					width: 48px;
-					height: 48px;
-					border-radius: 50%;
+				i{
+					color: #2E3038;
+					font-size: 24px;
 					line-height: 48px;
-					text-align: center;
-					display: inline-block;
-
-					i{
-						color: #2E3038;
-						font-size: 24px;
-						line-height: 48px;
-					}
 				}
-				.conf-need__supports{
+			}
+			.conf-need__supports{
+				display: flex;
+				justify-content: flex-start;
+
+				.need_sp_text{
+					text-align: left;
+					margin-left: 16px;
 					display: flex;
-					justify-content: flex-start;
+					flex-direction: column;
+					justify-content: center;
 
-					.need_sp_text{
-						text-align: left;
-						margin-left: 16px;
-						display: flex;
-						flex-direction: column;
-						justify-content: center;
+					.need_sp_text_line__1{
+						font-size: 13px;
+						color: #8E9098;
+						font-weight: 400;
+						line-height: 20px;
+					}
 
-						.need_sp_text_line__1{
-							font-size: 13px;
-							color: #8E9098;
-							font-weight: 400;
-							line-height: 20px;
-						}
-
-						.need_sp_text_line__2{
-							display: block;
-							color: #2E3038;
-							font-size: 16px;
-							font-weight: 500;
-							line-height: 24px;
-						}
-
+					.need_sp_text_line__2{
+						display: block;
+						color: #2E3038;
+						font-size: 16px;
+						font-weight: 500;
+						line-height: 24px;
 					}
 
 				}
 
 			}
+
 		}
 	}
 }

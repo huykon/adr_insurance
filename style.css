@@ -66,6 +66,9 @@
 }
 /*
 Landing Page*/
+.wrapper-adr-insurance {
+  position: relative;
+}
 .wrapper-adr-insurance .insw_selectbox--holder {
   position: relative;
   width: 100%;
@@ -153,6 +156,14 @@ Landing Page*/
 }
 .wrapper-adr-insurance .insw_selectbox--holder ul.ins__choose-list.menu-open {
   display: block;
+}
+.wrapper-adr-insurance .insw_selectbox--holder.disabled {
+  cursor: not-allowed;
+  background-color: #eee;
+  pointer-events: none;
+}
+.wrapper-adr-insurance .insw_selectbox--holder.disabled .insw__select-box {
+  background-color: #eee;
 }
 .wrapper-adr-insurance button.conf_show_results {
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.15);
@@ -465,6 +476,33 @@ Landing Page*/
   line-height: 20px;
   display: block;
 }
+.wrapper-adr-insurance .ins-adr__chat-online {
+  cursor: pointer;
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  background-color: #2283F7;
+  border-radius: 512px;
+  display: flex;
+  color: #FFFFFF;
+  align-items: center;
+}
+.wrapper-adr-insurance .ins-adr__chat-online .chat-icon {
+  background-color: rgba(0, 0, 0, 0.22);
+  padding: 10px;
+  border-radius: 50%;
+}
+.wrapper-adr-insurance .ins-adr__chat-online .chat-icon .icon-message {
+  font-size: 24px;
+  color: #FFFFFF;
+}
+.wrapper-adr-insurance .ins-adr__chat-online .chat-text {
+  margin-left: 18px;
+  margin-right: 24px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 24px;
+}
 .ins-slider-container {
   background: #E5F3FF;
 }
@@ -528,11 +566,7 @@ Landing Page*/
   display: inline-block;
   width: 100%;
 }
-.ins-slider-container .form-comf__result .conf_chat_phone .conf_phone--hotline {
-  display: flex;
-  justify-content: space-between;
-}
-.ins-slider-container .form-comf__result .conf_chat_phone .conf_phone--hotline .ins-conf_bgico {
+.ins-slider-container .form-comf__result .conf_chat_phone .ins-conf_bgico {
   background: #F3F4F6;
   width: 48px;
   height: 48px;
@@ -541,29 +575,29 @@ Landing Page*/
   text-align: center;
   display: inline-block;
 }
-.ins-slider-container .form-comf__result .conf_chat_phone .conf_phone--hotline .ins-conf_bgico i {
+.ins-slider-container .form-comf__result .conf_chat_phone .ins-conf_bgico i {
   color: #2E3038;
   font-size: 24px;
   line-height: 48px;
 }
-.ins-slider-container .form-comf__result .conf_chat_phone .conf_phone--hotline .conf-need__supports {
+.ins-slider-container .form-comf__result .conf_chat_phone .conf-need__supports {
   display: flex;
   justify-content: flex-start;
 }
-.ins-slider-container .form-comf__result .conf_chat_phone .conf_phone--hotline .conf-need__supports .need_sp_text {
+.ins-slider-container .form-comf__result .conf_chat_phone .conf-need__supports .need_sp_text {
   text-align: left;
   margin-left: 16px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.ins-slider-container .form-comf__result .conf_chat_phone .conf_phone--hotline .conf-need__supports .need_sp_text .need_sp_text_line__1 {
+.ins-slider-container .form-comf__result .conf_chat_phone .conf-need__supports .need_sp_text .need_sp_text_line__1 {
   font-size: 13px;
   color: #8E9098;
   font-weight: 400;
   line-height: 20px;
 }
-.ins-slider-container .form-comf__result .conf_chat_phone .conf_phone--hotline .conf-need__supports .need_sp_text .need_sp_text_line__2 {
+.ins-slider-container .form-comf__result .conf_chat_phone .conf-need__supports .need_sp_text .need_sp_text_line__2 {
   display: block;
   color: #2E3038;
   font-size: 16px;
@@ -1839,7 +1873,7 @@ body.template-adr-insurance .datepicker table tr td.day.active:hover {
   justify-content: flex-start;
 }
 .ins-review_pk_chosen--container .ins_form-content-of-change .ins__decla--each-line .rev__right-col .rev_flex-block .rev_flex-box--right .rev__col-item-val.rev_field-with-unit .ins__form-input {
-  max-width: 232px;
+  max-width: 350px;
 }
 .ins-review_pk_chosen--container .ins_form-content-of-change .ins__decla--each-line .rev__right-col .rev_flex-block .rev_flex-box--right .rev__col-item-val.rev_field-with-unit .rev_input--unit {
   color: #2E3038;
@@ -1887,13 +1921,17 @@ body.template-adr-insurance .datepicker table tr td.day.active:hover {
   color: #2E3038;
   margin: 0;
 }
-.ins-review_pk_chosen--container .ins_form-content-of-change .ins__decla--each-line .rev__right-col .ins_group-fields {
+.ins-review_pk_chosen--container .ins_form-content-of-change .ins__decla--each-line .rev__right-col .ins_group-fields:not(.ins_group--without-line) {
   border-bottom: 1px solid #E8EAEE;
   padding-bottom: 32px;
   margin-bottom: 16px;
 }
 .ins-review_pk_chosen--container .ins_form-content-of-change .ins__decla--each-line .rev__right-col .row-full-field .ins_rev_question {
   display: block;
+}
+.ins-review_pk_chosen--container .ins_form-content-of-change .ins__decla--each-line .rev__right-col .row-full-field .ins_rev_question_listed {
+  display: block;
+  margin-bottom: 8px;
 }
 .ins-review_pk_chosen--container .ins_form-content-of-change .ins__decla--each-line .rev__right-col .row-full-field .ins__revline_ck {
   margin-top: 16px;
@@ -1942,6 +1980,67 @@ body.template-adr-insurance .datepicker table tr td.day.active:hover {
   padding: 12px;
   resize: none;
 }
+.ins-review_pk_chosen--container .ins_form-content-of-change .ins__decla--each-line .rev__right-col .row-full-field .ins__tb-showcase .insred-table-head > div {
+  display: flex;
+  justify-content: center;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+.ins-review_pk_chosen--container .ins_form-content-of-change .ins__decla--each-line .rev__right-col .row-full-field .ins__tb-showcase .insred-table-head > div span {
+  padding: 0 8px;
+}
+.ins-review_pk_chosen--container .ins_form-content-of-change .ins__decla--each-line .rev__right-col .row-full-field .ins__tb-showcase .insred-table-head > div:not(:last-child) {
+  background: #F3F4F6;
+  border: 1px solid #e5e5e5;
+}
+.ins-review_pk_chosen--container .ins_form-content-of-change .ins__decla--each-line .rev__right-col .row-full-field .ins__tb-showcase .insred-table-head > div:not(:first-child) {
+  border-left: 0;
+}
+.ins-review_pk_chosen--container .ins_form-content-of-change .ins__decla--each-line .rev__right-col .row-full-field .ins__tb-showcase .insred-table-body .insred-body-row {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+}
+.ins-review_pk_chosen--container .ins_form-content-of-change .ins__decla--each-line .rev__right-col .row-full-field .ins__tb-showcase .insred-table-body .insred-body-row > div {
+  background: #FFFFFF;
+}
+.ins-review_pk_chosen--container .ins_form-content-of-change .ins__decla--each-line .rev__right-col .row-full-field .ins__tb-showcase .insred-table-body .insred-body-row > div:not(:last-child) {
+  border: 1px solid #e5e5e5;
+  border-top: 0;
+}
+.ins-review_pk_chosen--container .ins_form-content-of-change .ins__decla--each-line .rev__right-col .row-full-field .ins__tb-showcase .insred-table-body .insred-body-row > div:not(:first-child) {
+  border-left: 0;
+}
+.ins-review_pk_chosen--container .ins_form-content-of-change .ins__decla--each-line .rev__right-col .row-full-field .ins__tb-showcase .insred-table-body .insred-body-row > div .ins_show_case_area {
+  margin-left: 8px;
+  margin-right: 8px;
+  height: 140px;
+  width: 100%;
+  min-height: auto;
+  border: 0;
+  outline: none;
+  padding: 12px 0;
+  resize: none;
+}
+.ins-review_pk_chosen--container .ins_form-content-of-change .ins__decla--each-line .rev__right-col .row-full-field .ins__tb-showcase .insred-table-body .insred-body-row > div.insred__flex-column {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.ins-review_pk_chosen--container .ins_form-content-of-change .ins__decla--each-line .rev__right-col .row-full-field .ins__tb-showcase .insred-table-body .insred-body-row > div.insred__flex-column .remove_row {
+  cursor: pointer;
+  margin-left: 20px;
+}
+.ins-review_pk_chosen--container .ins_form-content-of-change .ins__decla--each-line .rev__right-col .row-full-field .ins__tb-showcase .insred-table-body .insred-body-row:first-child > div.insred__flex-column {
+  position: relative;
+}
+.ins-review_pk_chosen--container .ins_form-content-of-change .ins__decla--each-line .rev__right-col .row-full-field .ins__tb-showcase .insred-table-body .insred-body-row:first-child > div.insred__flex-column .remove_row {
+  position: absolute;
+  right: 99999999px;
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+}
 .ins-review_pk_chosen--container .ins_form-content-of-change .ins__decla--each-line .rev__right-col .row-full-field .ins__tb-showcase .ins__btn--add-case {
   background: #F3F4F6;
   padding: 10px 55px 10px 16px;
@@ -1951,6 +2050,7 @@ body.template-adr-insurance .datepicker table tr td.day.active:hover {
   line-height: 24px;
   border: 0;
   display: flex;
+  margin-top: 16px;
 }
 .ins-review_pk_chosen--container .ins_form-content-of-change .ins__decla--each-line .rev__right-col .row-full-field .ins__tb-showcase .ins__btn--add-case .adr-icon {
   height: 24px;
@@ -1958,6 +2058,78 @@ body.template-adr-insurance .datepicker table tr td.day.active:hover {
   font-size: 24px;
   color: #2E3038;
   margin-right: 15px;
+}
+.ins-review_pk_chosen--container .ins_form-content-of-change .btn_ins-continues {
+  text-align: center;
+  padding-left: 110px;
+  padding-right: 110px;
+  position: relative;
+  margin-bottom: 44px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.15);
+}
+.ins-review_pk_chosen--container .ins_form-content-of-change .btn_ins-continues:after {
+  content: '\e904';
+  font-family: adr-icon;
+  font-size: 24px;
+  color: #FFFFFF;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.ins-review_pk_chosen--container .ins__modal-confirm .modal-content {
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  text-align: center;
+  color: #2E3038;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+.ins-review_pk_chosen--container .ins__modal-confirm .modal-content .modal-header {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  padding: 12px 16px;
+  border: 0;
+}
+.ins-review_pk_chosen--container .ins__modal-confirm .modal-content .modal-body {
+  padding: 0 16px 12px;
+  text-align: center;
+}
+.ins-review_pk_chosen--container .ins__modal-confirm .modal-content .modal-footer {
+  padding: 0 16px 16px;
+  border: 0;
+  display: flex;
+}
+.ins-review_pk_chosen--container .ins__modal-confirm .modal-content .modal-footer .btn-ins_agree,
+.ins-review_pk_chosen--container .ins__modal-confirm .modal-content .modal-footer .btn-ins_close {
+  text-align: center;
+  padding: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 24px;
+  border-radius: 4px;
+  border: 1px solid;
+}
+.ins-review_pk_chosen--container .ins__modal-confirm .modal-content .modal-footer .btn-ins_close {
+  background: linear-gradient(90deg, #EA512C 0%, #E53935 100%);
+  color: #FFFFFF;
+  margin-right: 4px;
+  width: 100%;
+  border-color: #E53935;
+}
+.ins-review_pk_chosen--container .ins__modal-confirm .modal-content .modal-footer .btn-ins_agree {
+  background-color: #FFFFFF;
+  color: #2E3038;
+  margin-left: 4px;
+  width: 100%;
+  border-color: #D6D8E0;
 }
 /*IP Fail*/
 .ip-fail-warp {
@@ -2246,6 +2418,11 @@ body.template-adr-insurance .datepicker table tr td.day.active:hover {
   font-size: 15px;
   font-weight: 500;
   margin-top: 15px;
+}
+@media (min-width: 640px) {
+  .ins__modal-confirm .modal-dialog {
+    width: 288px;
+  }
 }
 @media screen and (max-width: 1023px) {
   .ins--page-heading.ins_is-sticky {
