@@ -422,7 +422,6 @@
 
                 if (permanent_address_city){
                     Adr_Ins_FillValuetoSelect(permanent_address_citySame, permanent_address_city, permanent_address_city, false);
-                    console.log($('input[name="policy_holder_permanent_address_city"]').val());
                 } else{
                     Adr_Ins_FillValuetoSelect(permanent_address_citySame, 'Thành phố', permanent_address_city, false);
                 }
@@ -448,9 +447,9 @@
                 beneficiaryAddress.val('');
                 beneficiaryCellPhoneSame.val('');
 
-                Adr_Ins_FillValuetoSelect(permanent_address_citySame, 'Chọn', '', false);
-                Adr_Ins_FillValuetoSelect(permanent_address_townshipSame, 'Chọn', '', false);
-                Adr_Ins_FillValuetoSelect(permanent_address_wardSame, 'Chọn', '', false);
+                Adr_Ins_FillValuetoSelect(permanent_address_citySame, 'Thành phố', '', false);
+                Adr_Ins_FillValuetoSelect(permanent_address_townshipSame, 'Quận', '', false);
+                Adr_Ins_FillValuetoSelect(permanent_address_wardSame, 'Phường', '', false);
                 Adr_Ins_FillValuetoSelect(select_relationship, 'Chọn', '', false);
 
                 $(this).closest('.ins__holder_same').find('.ins_group-fields input').attr("disabled", false);
