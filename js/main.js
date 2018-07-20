@@ -328,12 +328,18 @@
         });
     }
 
-    function Adr_Ins_FillValuetoSelect(object, val_display = "Chọn", val_attr = '', set_class = true) {
+    function Adr_Ins_FillValuetoSelect(object, val_display = "Chọn", val_attr = '', set_class = true, set_choiced = true) {
         object.val(val_attr);
         if (set_class){
             object.closest('.insw_selectbox--holder').addClass('disabled');
         } else{
             object.closest('.insw_selectbox--holder').removeClass('disabled');
+        }
+
+        if (set_choiced){
+            object.closest('.insw_selectbox--holder').find('.ins-choice__value[data-choice="'+val_attr+'"]').addClass('ins_choiced');
+        } else{
+            object.closest('.insw_selectbox--holder').find('.ins-choice__value[data-choice="'+val_attr+'"]').removeClass('ins_choiced');
         }
 
         object.closest('.insw_selectbox--holder').find('.insw__select-box').attr('value', val_attr);
@@ -342,9 +348,9 @@
 
     function Adr_Ins_ShowSamePolicy(){
 
-        var fullName = ($('input[name="policy_holder_fullname"]').length) ? $('input[name="policy_holder_fullname"]').val() : '',
-            dateOfBirth = ($('input[name="policy_holder_dateofbirth"]').length) ? $('input[name="policy_holder_dateofbirth"]').val() : '',
-            idPassPort = ($('input[name="policy_holder_idpassport"]').length) ? $('input[name="policy_holder_idpassport"]').val() : '';
+        var fullName = $('input[name="policy_holder_fullname"]').val() ,
+            dateOfBirth =  $('input[name="policy_holder_dateofbirth"]').val(),
+            idPassPort =  $('input[name="policy_holder_idpassport"]').val();
         var fullNameSame = $('input[name="policy_holder_fullname_same"]'),
             dateOfBirthSame = $('input[name="policy_holder_dateofbirth_same"]'),
             idPassPortSame = $('input[name="policy_holder_idpassport_same"]');
@@ -362,9 +368,9 @@
         }
 
         $('#same_as_policy_holder').on('change', function () {
-            var fullName = ($('input[name="policy_holder_fullname"]').length) ? $('input[name="policy_holder_fullname"]').val() : '',
-                dateOfBirth = ($('input[name="policy_holder_dateofbirth"]').length) ? $('input[name="policy_holder_dateofbirth"]').val() : '',
-                idPassPort = ($('input[name="policy_holder_idpassport"]').length) ? $('input[name="policy_holder_idpassport"]').val() : '';
+            var fullName = $('input[name="policy_holder_fullname"]').val(),
+                dateOfBirth = $('input[name="policy_holder_dateofbirth"]').val(),
+                idPassPort = $('input[name="policy_holder_idpassport"]').val();
             var fullNameSame = $('input[name="policy_holder_fullname_same"]'),
                 dateOfBirthSame = $('input[name="policy_holder_dateofbirth_same"]'),
                 idPassPortSame = $('input[name="policy_holder_idpassport_same"]'),
@@ -388,10 +394,10 @@
         });
 
         $('#beneficiary_same_as_policy_holder').on('change', function () {
-            var fullName = ($('input[name="policy_holder_fullname"]').length) ? $('input[name="policy_holder_fullname"]').val() : '',
-                idPassPort = ($('input[name="policy_holder_idpassport"]').length) ? $('input[name="policy_holder_idpassport"]').val() : '',
-                permanentAddress = ($('input[name="policy_holder_permanent_address"]').length) ? $('input[name="policy_holder_permanent_address"]').val() : '',
-                cellPhone = ($('input[name="policy_holder_cell_phone"]').length) ? $('input[name="policy_holder_cell_phone"]').val() : '';
+            var fullName = $('input[name="policy_holder_fullname"]').val(),
+                idPassPort = $('input[name="policy_holder_idpassport"]').val(),
+                permanentAddress = $('input[name="policy_holder_permanent_address"]').val(),
+                cellPhone = $('input[name="policy_holder_cell_phone"]').val();
 
             var fullNameSame = $('input[name="beneficiary_policy_holder_fullname_same"]'),
                 idPassPortSame = $('input[name="beneficiary_policy_holder_idpassport_same"]'),
@@ -414,9 +420,25 @@
                 beneficiaryAddress.val(permanentAddress);
                 beneficiaryCellPhoneSame.val(cellPhone);
 
-                Adr_Ins_FillValuetoSelect(permanent_address_citySame, permanent_address_city, permanent_address_city, false);
-                Adr_Ins_FillValuetoSelect(permanent_address_townshipSame, permanent_address_township, permanent_address_township, false);
-                Adr_Ins_FillValuetoSelect(permanent_address_wardSame, permanent_address_ward, permanent_address_ward, false);
+                if (permanent_address_city){
+                    Adr_Ins_FillValuetoSelect(permanent_address_citySame, permanent_address_city, permanent_address_city, false);
+                    console.log($('input[name="policy_holder_permanent_address_city"]').val());
+                } else{
+                    Adr_Ins_FillValuetoSelect(permanent_address_citySame, 'Thành phố', permanent_address_city, false);
+                }
+
+                if (permanent_address_township){
+                    Adr_Ins_FillValuetoSelect(permanent_address_townshipSame, permanent_address_township, permanent_address_township, false);
+                } else{
+                    Adr_Ins_FillValuetoSelect(permanent_address_townshipSame, 'Quận', permanent_address_township, false);
+                }
+
+                if (permanent_address_ward){
+                    Adr_Ins_FillValuetoSelect(permanent_address_wardSame, permanent_address_ward, permanent_address_ward, false);
+                } else{
+                    Adr_Ins_FillValuetoSelect(permanent_address_wardSame, 'Phường', permanent_address_ward, false);
+                }
+
                 Adr_Ins_FillValuetoSelect(select_relationship, 'Bản thân', 'Bản thân', true);
 
                 $(this).closest('.ins__holder_same').find('.ins_group-fields input:not(.ins_not_disable_same)').attr("disabled", true);

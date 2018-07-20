@@ -1678,6 +1678,7 @@ body.template-adr-insurance .datepicker table tr td.day.active:hover {
 .wrapper-declaration {
   background: #FFFFFF;
   color: #2E3038;
+  padding-bottom: 64px;
 }
 .ins-review_pk_chosen--container .ins_item__accd_review {
   margin-bottom: 16px;
