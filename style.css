@@ -228,6 +228,11 @@ Landing Page*/
 .wrapper-adr-insurance .btn_ins-primary:active {
   background: linear-gradient(90deg, #A93B20 0%, #A62A27 100%);
 }
+.wrapper-adr-insurance .btn_ins-primary[disabled] {
+  background: #E8EAEE;
+  color: #8E9098;
+  box-shadow: none;
+}
 .wrapper-adr-insurance .btn_ins-secondary {
   background: #FFFFFF;
   border: 1px solid #BEC0C8;
@@ -2060,7 +2065,7 @@ body.template-adr-insurance .datepicker table tr td.day.active:hover {
   color: #2E3038;
   margin-right: 15px;
 }
-.ins-review_pk_chosen--container .ins_form-content-of-change .btn_ins-continues {
+.ins-review_pk_chosen--container .btn_ins-continues {
   text-align: center;
   padding-left: 110px;
   padding-right: 110px;
@@ -2068,7 +2073,7 @@ body.template-adr-insurance .datepicker table tr td.day.active:hover {
   margin-bottom: 44px;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.15);
 }
-.ins-review_pk_chosen--container .ins_form-content-of-change .btn_ins-continues:after {
+.ins-review_pk_chosen--container .btn_ins-continues:after {
   content: '\e904';
   font-family: adr-icon;
   font-size: 24px;
@@ -2081,6 +2086,9 @@ body.template-adr-insurance .datepicker table tr td.day.active:hover {
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
+  -webkit-transition: all 0.2s ease 0s;
+  -o-transition: all 0.2s ease, 0s;
+  transition: all 0.2s ease 0s;
 }
 .ins-review_pk_chosen--container .ins__modal-confirm .modal-content {
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.15);
@@ -2132,7 +2140,193 @@ body.template-adr-insurance .datepicker table tr td.day.active:hover {
   width: 100%;
   border-color: #D6D8E0;
 }
-/*IP Fail*/
+.wrapper-review {
+  background: #FFFFFF;
+  color: #2E3038;
+  padding-bottom: 64px;
+}
+.ins-review_pk_chosen--container.review-again .cafefully_proceeding {
+  background-color: #F3F4F6;
+  box-shadow: none;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #2E3038;
+  margin-bottom: 16px;
+}
+.ins-review_pk_chosen--container.review-again .ins__panel-review-holder {
+  box-shadow: none;
+  margin-bottom: 16px;
+  border: 1px solid #E8EAEE;
+}
+.ins-review_pk_chosen--container.review-again .ins__panel-review-holder .panel-heading {
+  background-color: #F3F4F6;
+  border: 0;
+  padding: 14px 32px;
+}
+.ins-review_pk_chosen--container.review-again .ins__panel-review-holder .panel-heading .ins_panel-title {
+  color: #2E3038;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+}
+.ins-review_pk_chosen--container.review-again .ins__panel-review-holder .panel-body {
+  color: #2E3038;
+  padding: 30px 32px;
+}
+.ins-review_pk_chosen--container.review-again .ins__panel-review-holder .panel-body .ins_review--sec {
+  position: relative;
+}
+.ins-review_pk_chosen--container.review-again .ins__panel-review-holder .panel-body .ins_review--sec:not(:first-child) {
+  margin-top: 32px;
+}
+.ins-review_pk_chosen--container.review-again .ins__panel-review-holder .panel-body .ins_review--sec .ins__rev_infor-title {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+  margin: 0 0 12px;
+  padding-right: 150px;
+}
+.ins-review_pk_chosen--container.review-again .ins__panel-review-holder .panel-body .ins_review--sec .row-eq-height {
+  margin-bottom: 12px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+.ins-review_pk_chosen--container.review-again .ins__panel-review-holder .panel-body .ins_review--sec .row-eq-height .rev--left {
+  color: #8E9098;
+}
+.ins-review_pk_chosen--container.review-again .ins__panel-review-holder .panel-body .ins_review--sec .row-eq-height .rev--detail {
+  color: #2E3038;
+}
+.ins-review_pk_chosen--container.review-again .ins__panel-review-holder .panel-body .ins_review--sec .ins__change-info {
+  position: absolute;
+  right: -16px;
+  top: 0;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.ins-review_pk_chosen--container.review-again .ins__panel-review-holder .panel-body .ins_review--sec .row-ins_question-separate {
+  margin-bottom: 24px;
+}
+.ins-review_pk_chosen--container.review-again .ins__panel-review-holder .panel-body .ins_review--sec .rev--status-question {
+  display: flex;
+  color: #2E3038;
+}
+.ins-review_pk_chosen--container.review-again .ins__panel-review-holder .panel-body .ins_review--sec .rev--status-question .question-index {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+}
+.ins-review_pk_chosen--container.review-again .ins__panel-review-holder .panel-body .ins_review--sec .rev--status-question .question-content {
+  font-size: 14px;
+  margin-left: 17px;
+  line-height: 22px;
+}
+.ins-review_pk_chosen--container.review-again .ins__panel-review-holder .panel-body .ins_review--sec .rev--status-question .question-content > b {
+  font-weight: 500;
+}
+.ins-review_pk_chosen--container.review-again .ins__panel-review-holder .panel-body .ins_review--sec .rev--status-question .question-content .rev-quote__answer {
+  font-weight: 400;
+  margin-top: 2px;
+}
+.ins-review_pk_chosen--container.review-again .ins__panel-review-holder .panel-body .ins_review--sec .rev--status-question .question-content .table-showcase {
+  margin-top: 8px;
+}
+.ins-review_pk_chosen--container.review-again .ins__panel-review-holder .panel-body .ins_review--sec .rev--status-question .question-content .table-showcase .insred-table-head {
+  margin-bottom: 0;
+}
+.ins-review_pk_chosen--container.review-again .ins__panel-review-holder .panel-body .ins_review--sec .rev--status-question .question-content .table-showcase .insred-table-head > div {
+  display: flex;
+  justify-content: center;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  background: #F3F4F6;
+  border: 1px solid #e5e5e5;
+}
+.ins-review_pk_chosen--container.review-again .ins__panel-review-holder .panel-body .ins_review--sec .rev--status-question .question-content .table-showcase .insred-table-head > div:not(:last-child) {
+  border-right: 0;
+}
+.ins-review_pk_chosen--container.review-again .ins__panel-review-holder .panel-body .ins_review--sec .rev--status-question .question-content .table-showcase .insred-table-head > div span {
+  padding: 0 8px;
+}
+.ins-review_pk_chosen--container.review-again .ins__panel-review-holder .panel-body .ins_review--sec .rev--status-question .question-content .table-showcase .insred-table-body .insred-body-row {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+}
+.ins-review_pk_chosen--container.review-again .ins__panel-review-holder .panel-body .ins_review--sec .rev--status-question .question-content .table-showcase .insred-table-body .insred-body-row > div {
+  padding: 12px 16px;
+  background: #FFFFFF;
+  border: 1px solid #e5e5e5;
+  border-top: 0;
+}
+.ins-review_pk_chosen--container.review-again .ins__panel-review-holder .panel-body .ins_review--sec .rev--status-question .question-content .table-showcase .insred-table-body .insred-body-row > div:not(:last-child) {
+  border-right: 0;
+}
+.ins-review_pk_chosen--container.review-again .ins__panel-review-holder .panel-body .ins_review--sec .rev--status-question .question-content .table-showcase .insred-table-body .insred-body-row > div .ins_show_case_area {
+  margin-left: 8px;
+  margin-right: 8px;
+  height: 140px;
+  width: 100%;
+  min-height: auto;
+  border: 0;
+  outline: none;
+  padding: 12px 0;
+  resize: none;
+}
+.ins-review_pk_chosen--container.review-again .ins__panel-rules .adr-insurance-form {
+  display: flex;
+}
+.ins-review_pk_chosen--container.review-again .ins__panel-rules .adr-insurance-form .ins__form-checkbox[type="checkbox"] + label {
+  top: -5px;
+}
+.ins-review_pk_chosen--container.review-again .ins__panel-rules .adr-insurance-form .ins_rules-content {
+  margin-left: 22px;
+  color: #2E3038;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+.ins-review_pk_chosen--container.review-again .ins__panel-rules .adr-insurance-form .ins_rules-content a {
+  color: #0388cd;
+}
+.ins-review_pk_chosen--container.review-again .reference-information {
+  box-shadow: none;
+  background-color: #F3F4F6;
+  color: #2E3038;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+}
+.ins-review_pk_chosen--container.review-again .reference-information .ref-info-title {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+}
+.ins-review_pk_chosen--container.review-again .reference-information .rev--button-action a {
+  padding: 6px 18px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  margin: 0 7px;
+  float: left;
+  display: flex;
+  align-items: center;
+}
+.ins-review_pk_chosen--container.review-again .reference-information .rev--button-action a:last-child {
+  margin-right: 0;
+}
+.ins-review_pk_chosen--container.review-again .reference-information .rev--button-action a i {
+  margin-right: 16px;
+  font-size: 24px;
+}
+.ins-review_pk_chosen--container.review-again .btn_ins-continues {
+  margin-bottom: 0;
+}
+.ins-review_pk_chosen--container.review-again .btn_ins-continues[disabled]:after {
+  color: #8E9098;
+}
 .ip-fail-warp {
   background-color: #ffffff;
   padding: 75px 0 50px;
@@ -2146,26 +2340,22 @@ body.template-adr-insurance .datepicker table tr td.day.active:hover {
   font-weight: bold;
   color: #FF7043;
   margin: 0 0 15px;
-  line-height: 1.5em;
+  line-height: 24px;
 }
 .ip-fail-warp .ip-fail__description {
   font-size: 15px;
-  font-weight: 500;
-  margin: 0 0 25px;
-  line-height: 1.5em;
+  font-weight: 400;
+  margin: 0 0 15px;
+  line-height: 24px;
 }
 .ip-fail-warp .ip-fail__btn-return {
   position: relative;
   display: inline-block;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 500;
   color: #ffffff;
   padding: 12px 80px;
-  border-radius: 5px;
-  background: -moz-linear-gradient(90deg, #ea512c 0%, #e53935 100%);
-  background: -webkit-linear-gradient(90deg, #ea512c 0%, #e53935 100%);
-  background: linear-gradient(90deg, #ea512c 0%, #e53935 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ea512c", endColorstr="#e53935", GradientType=1);
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.15);
 }
 .ip-fail-warp .ip-fail__btn-return:before {
   position: absolute;
@@ -2185,7 +2375,7 @@ body.template-adr-insurance .datepicker table tr td.day.active:hover {
   position: relative;
   width: 50%;
   margin: 35px auto 0;
-  padding: 30px 0;
+  padding: 30px 0 0;
 }
 .ip-fail-warp .ip-fail__help:before {
   position: absolute;
@@ -2195,16 +2385,6 @@ body.template-adr-insurance .datepicker table tr td.day.active:hover {
   height: 1px;
   width: 100%;
   background-color: #E8EAEE;
-}
-.ip-fail-warp .ip-fail__help-support {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin: 0 -8px;
 }
 .ip-fail-warp .ip-fail__help-col-4 {
   padding: 0 8px;
@@ -2256,14 +2436,14 @@ body.template-adr-insurance .datepicker table tr td.day.active:hover {
 }
 .ip-title-name-consumer {
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 500;
 }
 .ip-thank-you-order-number {
   display: inline-block;
   color: #ffffff;
   padding: 6px 35px;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 500;
   background-color: #1CBE55;
   border-radius: 5px;
 }
@@ -2295,12 +2475,12 @@ body.template-adr-insurance .datepicker table tr td.day.active:hover {
   text-align: center;
   color: #ffffff;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 500;
   background-color: #1CBE55;
 }
 .ip-thank-you__next .ip-thank-you__next-line.round-line:before {
   content: '';
-  background-color: #D8D8D8;
+  background-color: #FFFFFF;
   border: 7px solid #E53935;
 }
 .ip-thank-you__next .ip-thank-you__next-line:after {
@@ -2325,11 +2505,11 @@ body.template-adr-insurance .datepicker table tr td.day.active:hover {
 }
 .ip-thank-you__next .ip-thank-you__next-line .ip-thank-you__next-line-title {
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 500;
 }
 .ip-thank-you__next .ip-thank-you__next-line .ip-thank-you__next-line-sub-title {
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 400;
   margin-top: 5px;
 }
 .ip-thank-you__approved-declined {
@@ -2342,7 +2522,7 @@ body.template-adr-insurance .datepicker table tr td.day.active:hover {
   left: 50%;
   padding: 2px 15px;
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 400;
   border-radius: 4px;
   background-color: #FFFFFF;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.15);
@@ -2352,6 +2532,9 @@ body.template-adr-insurance .datepicker table tr td.day.active:hover {
   -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
   transform: translateX(-50%);
+}
+.ip-thank-you__approved-declined .ip-thank-you__approved-declined-item {
+  height: 100%;
 }
 .ip-thank-you__approved-declined-item {
   background-color: #F3F4F6;
@@ -2365,7 +2548,7 @@ body.template-adr-insurance .datepicker table tr td.day.active:hover {
   text-align: center;
   background-color: #ffffff;
   border-radius: 50%;
-  font-weight: bold;
+  font-weight: 500;
 }
 .ip-thank-you__approved-declined-item i.adr-icon.icon-success-new {
   color: #1CBE55;
@@ -2387,38 +2570,30 @@ body.template-adr-insurance .datepicker table tr td.day.active:hover {
 .ip-thank-you__approved-declined-item .approved-declined-description {
   margin: 0;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
 }
 .ip-thank-you__will-get {
-  border: 1px solid #E2E4EC;
+  justify-content: center;
+}
+.ip-thank-you__will-get .ip-thank-you__approved-declined-item {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  background-color: #F3F4F6;
   border-radius: 4px;
-  padding: 45px 50px;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-justify-content: space-around;
-  justify-content: space-around;
+  text-align: center;
 }
-.ip-thank-you__will-get .ip-thank-you__will-get-item {
-  padding: 0 5px;
-}
-.ip-thank-you__will-get .ip-thank-you__will-get-item i.adr-icon {
-  display: inline-block;
+.ip-thank-you__will-get .ip-thank-you__approved-declined-item .adr-icon_will-get {
   height: 64px;
   width: 64px;
   line-height: 64px;
-  border-radius: 50%;
-  font-size: 30px;
-  color: #2E3038;
-  background-color: #F3F4F6;
+  font-size: 32px;
 }
-.ip-thank-you__will-get .ip-thank-you__will-get-item .ip-thank-you__will-get-item-text {
-  display: block;
+.ip-thank-you__will-get .ip-thank-you__approved-declined-item .approved-declined-description {
+  color: #2E3038;
+  margin-top: 16px;
   font-size: 15px;
   font-weight: 500;
-  margin-top: 15px;
+  line-height: 24px;
 }
 @media (min-width: 640px) {
   .ins__modal-confirm .modal-dialog {

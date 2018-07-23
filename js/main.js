@@ -457,6 +457,21 @@
         });
     }
 
+    function Adr_Ins_CheckRules(){
+        if ( $('input[name="optionsAgreeRule"]').is(":checked")){
+            $('input[name="optionsAgreeRule"]:checked').closest('.review-again').find('.btn_ins-continues').attr('disabled', false);
+        }else{
+            $('input[name="optionsAgreeRule"]:checked').closest('.review-again').find('.btn_ins-continues').attr('disabled', true);
+        }
+
+        $('input[name="optionsAgreeRule"]').on('change', function () {
+            if ( $(this).prop("checked")){
+                $(this).closest('.review-again').find('.btn_ins-continues').attr('disabled', false);
+            }else{
+                $(this).closest('.review-again').find('.btn_ins-continues').attr('disabled', true);
+            }
+        });
+    }
 
     $(document).ready(function () {
 
@@ -512,7 +527,7 @@
         Adr_Ins_ConditionShow('check_insured_22','.row-full-field','.ins__tb-showcase','1');
 
         Adr_Ins_ShowSamePolicy();
-
+        Adr_Ins_CheckRules();
 
     });
 
@@ -530,11 +545,12 @@ function Adr_Ins_Upload(){
         var fileSelect    = document.getElementById('ins__upload-certificate'),
             fileDrag      = document.getElementById('ins__upload-file-drag');
 
-        fileSelect.addEventListener('change', Adr_Ins_UF_fileSelectHandler, false);
-
+        if (fileSelect != null){
+            fileSelect.addEventListener('change', Adr_Ins_UF_fileSelectHandler, false);
+        }
         // Is XHR2 available?
         var xhr = new XMLHttpRequest();
-        if (xhr.upload) {
+        if (xhr.upload && fileDrag != null) {
             // File Drop
             fileDrag.addEventListener('dragover', Adr_Ins_UF_fileDragHover, false);
             fileDrag.addEventListener('dragleave', Adr_Ins_UF_fileDragHover, false);
