@@ -473,6 +473,26 @@
         });
     }
 
+    function Adr_Ins_ControlTabs(){
+
+        $('.btn-prev-nac').on('click', function () {
+            if ($('.ins__nav-tab-dropdown .nav-tabs > .active').prev('li').find('a').length){
+                $('.ins__nav-tab-dropdown .nav-tabs > .active').prev('li').find('a').trigger('click');
+            } else{
+                $('.ins__nav-tab-dropdown .nav-tabs > .active').prev('li').prev('li').find('a').trigger('click');
+            }
+
+        });
+
+        $('.btn-next-nac').on('click', function(){
+            if ($('.ins__nav-tab-dropdown .nav-tabs > .active').next('li').find('a').length){
+                $('.ins__nav-tab-dropdown .nav-tabs > .active').next('li').find('a').trigger('click');
+            } else{
+                $('.ins__nav-tab-dropdown .nav-tabs > .active').next('li').next('li').find('a').trigger('click');
+            }
+        });
+    }
+
     $(document).ready(function () {
 
         Adr_Ins_Swiper();
@@ -528,7 +548,7 @@
 
         Adr_Ins_ShowSamePolicy();
         Adr_Ins_CheckRules();
-
+        Adr_Ins_ControlTabs();
     });
 
     $(window).on('resize', function(){
