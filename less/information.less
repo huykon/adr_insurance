@@ -1,0 +1,236 @@
+.wrapper-info{
+	background: #FFFFFF;
+	color: #2E3038;
+	padding-bottom: 64px;
+}
+.ins-information--container{
+	padding-top: 15px;
+	.ins__nav-tab-dropdown{
+		ul.nav-tabs{
+			background-color: #F3F4F6;
+			padding: 18px 0;
+			border: 1px solid #E8EAEE;
+			li{
+				padding: 10px 16px;
+				color: #2E3038;
+				
+				&.tab-info-title{
+					font-size: 16px;
+					font-weight: 500;
+					line-height: 26px;
+				}
+				a{
+					font-size: 14px;
+					font-weight: 400;
+					line-height: 22px;
+					padding: 0;
+					margin: 0;
+					border: 0;
+				}
+				&:hover, &.active{
+					a{
+						color: #E53935;
+						background: transparent;
+						border: 0;
+					}
+				}
+			}
+		}
+	}
+	.ins__nav-tab-content{
+		.tab-content{
+			padding-left: 16px;
+			.ins__head-action{
+
+				.back-page{
+					font-size: 16px;
+					font-weight: 500;
+					line-height: 26px;
+					margin: 11px 0;
+					display: inline-flex;
+					i{
+						color: #2E3038;
+						font-size: 24px;
+						margin-right: 16px;
+						width: 24px;
+						height: 24px;
+					}
+					&:hover{
+						color: #E53935;
+						i{
+							color: #E53935;
+						}
+					}
+				}
+				.call-action{
+					font-size: 16px;
+					font-weight: 400;
+					line-height: 24px;
+					.call-sp{
+						font-weight: 500;
+						margin-left: 16px;
+						i{
+							background-color: #F3F4F6;
+							padding: 12px;
+							font-size: 24px;
+							color: #2E3038;
+							border-radius: 50%;
+							margin-right: 16px;
+						}
+					}
+				}
+			}
+			.tab-pane{
+				margin-top: 24px;
+				font-size: 15px;
+				font-weight: 400;
+				line-height: 24px;
+				.info-tab--title{
+					font-size: 24px;
+					font-weight: 500;
+					line-height: 36px;
+					margin: 0 0 16px 0;
+				}
+				.ins_item__quest{
+					.panel{
+						background-color: #FFFFFF;
+						border: 1px solid #D6D8E0;
+						border-radius: 4px;
+						box-shadow: none;
+						&:not(:first-child){
+							margin-top: 16px;
+						}
+						.panel-heading{
+							background: #FFFFFF;
+							border: 0;
+							padding: 11px;
+							> a{
+								font-size: 16px;
+								font-weight: 500;
+								line-height: 26px;
+								color: #2E3038;
+								display: flex;
+								justify-content: space-between;
+								align-items: center;
+								b{
+									font-weight: 500;
+								}
+								span{
+									position: relative;
+									width: 24px;
+									height: 24px;
+									line-height: 24px;
+									background-color: #E8EAEE;
+									border-radius: 4px;
+
+									&:after{
+										content: "\e902";
+										color: #000000;
+										font-family: adr-icon;
+										font-size: 24px;
+										display: inline-block;
+										position: absolute;
+										top: 50%;
+										left: 50%;
+										-webkit-transform: translate(-50%, -50%);
+										-moz-transform: translate(-50%, -50%);
+										-ms-transform: translate(-50%, -50%);
+										-o-transform: translate(-50%, -50%);
+										transform: translate(-50%, -50%);
+									}
+								}
+								&.collapsed{
+									span{
+										&:after{
+											content: '\e903';
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.ins_prev-next{
+			margin-top: 11px;
+			display: inline-block;
+			width: 100%;
+			clear: both;
+			button{
+				border: 0;
+				background: transparent;
+				color: #2E3038;
+				font-size: 16px;
+				font-weight: 500;
+				line-height: 26px;
+				display: inline-flex;
+				align-items: center;
+				outline: none;
+				i{
+					color: #2E3038;
+					font-size: 16px;
+					line-height: 24px;
+					width: 24px;
+					height: 24px;
+				}
+				&.btn-prev-nac{
+					i{
+						margin-right: 16px;
+					}
+				}
+				&.btn-next-nac{
+					i{
+						margin-left: 16px;
+					}
+				}
+				&:hover{
+					color: #E53935;
+					i{
+						color: #E53935;
+					}
+				}
+			}
+		}
+		.form-comf__result{
+			background-color: #F3F4F6;
+			padding: 24px 30px 32px;
+			margin-top: 16px;
+			clear: bottom;
+			text-align: center;
+			.comf__result--name{
+				margin: 0 0 10px;
+				font-size: 20px;
+				font-weight: 500;
+				line-height: 32px;
+				color: #2E3038;
+			}
+			.comf__result--date{
+				font-size: 14px;
+				font-weight: 400;
+				line-height: 22px;
+				color: #8E9098;
+				margin-bottom: 20px;
+				span{
+					color: #2E3038;
+				}
+			}
+			.comf_view__result{
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				.ins-dropdown_time{
+					display: flex;
+				}
+				.conf_container_results{
+					margin-left: 16px;
+					position: relative;
+					button.conf_show_results{
+						font-size: 16px;
+						padding: 12px 99px;
+					}
+				}
+			}
+		}
+	}
+}
