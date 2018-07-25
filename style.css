@@ -2389,6 +2389,23 @@ body.template-adr-insurance .datepicker table tr td.day.active:hover {
   width: 100%;
   background-color: #E8EAEE;
 }
+.ip-fail-warp .ip-fail__help.vinid_cashback .btn-reg-vinid {
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.15);
+}
+.ip-fail-warp .ip-fail__help.vinid_cashback .btn-connect-card {
+  padding: 12px 0;
+}
+.ip-fail-warp .ip-fail__payment-error {
+  position: relative;
+  width: 50%;
+  margin: 0 auto;
+}
+.ip-fail-warp .ip-fail__payment-error .btn-choose-other-payment {
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.15);
+}
+.ip-fail-warp .ip-fail__payment-error .btn-payment-later {
+  padding: 12px 0;
+}
 .ip-fail-warp .ip-fail__help-col-4 {
   padding: 0 8px;
   -webkit-flex: 0 0 33.333333%;
