@@ -2413,6 +2413,9 @@ body.template-adr-insurance .datepicker table tr td.day.active:hover {
   flex: 0 0 33.333333%;
   max-width: 33.333333%;
 }
+.ip-fail-warp .ip-fail__help-support {
+  justify-content: center;
+}
 .ip-fail-warp .ip-fail__help-support-item {
   border: 1px solid #E2E4EC;
   border-radius: 4px;
