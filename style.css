@@ -2251,6 +2251,7 @@ body.template-adr-insurance .datepicker table tr td.day.active:hover {
   padding: 0 8px;
 }
 .ins-review_pk_chosen--container.review-again .ins__panel-review-holder .panel-body .ins_review--sec .rev--status-question .question-content .table-showcase .insred-table-body .insred-body-row {
+  margin-bottom: 0;
   font-size: 13px;
   font-weight: 400;
   line-height: 20px;
