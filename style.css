@@ -2847,6 +2847,41 @@ body.template-adr-insurance .datepicker table tr td.day.active:hover {
   font-size: 16px;
   padding: 12px 99px;
 }
+/*========= Payment area =========*/
+.ins--sidebar-product__item {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  background: #FFFFFF;
+  align-items: center;
+}
+.ins--sidebar-product__item .product__item-logo {
+  max-width: 80px;
+}
+.ins--sidebar-product__item .ins--product__item-detail {
+  color: #8E9098;
+  margin-left: 16px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+.ins--sidebar-product__item .ins--product__item-detail .product_item-title {
+  color: #2E3038;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 24px;
+  margin: 0;
+}
+.ins--sidebar-product__item .ins--product__item-detail .p__benefit_ble {
+  margin-top: 2px;
+  display: block;
+}
+.ins--sidebar-product__item .ins--product__item-detail .p__benefit_ble .p__bold-price {
+  color: #2E3038;
+  margin-left: 4px;
+}
 @media (min-width: 640px) {
   .ins__modal-confirm .modal-dialog {
     width: 288px;
