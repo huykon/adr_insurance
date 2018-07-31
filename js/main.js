@@ -3,7 +3,7 @@
 
     // ADR Insurance Swiper
     function Adr_Ins_Swiper() {
-        if (typeof $.fn.Swiper === 'function') {
+       	if (typeof $.fn.swiper === 'function') { console.log('123123');
             var swiper = new Swiper('.swiper-container', {
                 pagination: '.swiper-pagination',
                 paginationClickable: true,
@@ -466,6 +466,7 @@
 
         $('input[name="optionsAgreeRule"]').on('change', function () {
             if ( $(this).prop("checked")){
+				$('#ins_modal_confirm_rules').modal({show: true});
                 $(this).closest('.review-again').find('.btn_ins-continues').attr('disabled', false);
             }else{
                 $(this).closest('.review-again').find('.btn_ins-continues').attr('disabled', true);
