@@ -104,6 +104,21 @@
                 autohidemode: true,
                 touchbehavior: true
             });
+
+			$('.ins__modal-agree-rules').on('shown.bs.modal', function (e) {
+				$('.ins__modal-agree-rules .modal-body').niceScroll({
+					cursorcolor: "#D6D8E0",
+					cursorwidth: "8px",
+					cursorborder: "1px solid #d6d8e0",
+					cursorborderradius: 0,
+					cursorfixedheight: 95,
+					cursoropacitymax: 1,
+					boxzoom: false,
+					autohidemode: true,
+					touchbehavior: true
+				});
+			});
+
         }
     }
 

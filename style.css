@@ -2328,6 +2328,38 @@ body.template-adr-insurance .datepicker table tr td.day.active:hover {
 .ins-review_pk_chosen--container.review-again .btn_ins-continues[disabled]:after {
   color: #8E9098;
 }
+.ins-review_pk_chosen--container.review-again .ins__modal-agree-rules button.close {
+  width: 24px;
+  height: 24px;
+  outline: none;
+  margin: 5px 5px 0 0;
+}
+.ins-review_pk_chosen--container.review-again .ins__modal-agree-rules button.close span {
+  color: #2E3038;
+  font-size: 24px;
+}
+.ins-review_pk_chosen--container.review-again .ins__modal-agree-rules .modal-header {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  margin-bottom: 9px;
+}
+.ins-review_pk_chosen--container.review-again .ins__modal-agree-rules .modal-body {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  margin-bottom: 16px;
+  height: 408px;
+  overflow: hidden;
+}
+.ins-review_pk_chosen--container.review-again .ins__modal-agree-rules .modal-footer {
+  justify-content: center;
+}
+.ins-review_pk_chosen--container.review-again .ins__modal-agree-rules .modal-footer button.btn-ins_close {
+  width: auto;
+  outline: none;
+  padding: 12px 119px;
+}
+.ins-review_pk_chosen--container.review-again .ins__modal-agree-rules .modal-footer button.btn-ins_close:hover,
+.ins-review_pk_chosen--container.review-again .ins__modal-agree-rules .modal-footer button.btn-ins_close:active {
+  background: linear-gradient(90deg, #CD4827 0%, #CA332F 100%);
+}
 .ip-fail-warp {
   background-color: #ffffff;
   padding: 75px 0 50px;
@@ -2885,6 +2917,9 @@ body.template-adr-insurance .datepicker table tr td.day.active:hover {
 @media (min-width: 640px) {
   .ins__modal-confirm .modal-dialog {
     width: 288px;
+  }
+  .ins__modal-confirm.ins__modal-agree-rules .modal-dialog {
+    width: 816px;
   }
 }
 @media screen and (max-width: 1023px) {
