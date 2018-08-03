@@ -454,6 +454,7 @@ Landing Page*/
   max-width: 60px;
   margin-right: 16px;
   float: left;
+  cursor: pointer;
 }
 .wrapper-adr-insurance .adr-insurance-form .ins__field-uploads .ins__response-area #ins__upload-messages {
   float: left;
@@ -654,10 +655,11 @@ Landing Page*/
   border: 1px solid #E2E4EC;
   border-radius: 4px;
   background-color: #FFFFFF;
+  height: 100%;
 }
 .ins-fees .right-fees-section .fee__brand .ins__brand--img {
   text-align: center;
-  padding: 18px 0;
+  padding: 18px;
 }
 .ins-benefit-section {
   background: #F3F4F6;
@@ -2140,6 +2142,29 @@ body.template-adr-insurance .datepicker table tr td.day.active:hover {
   width: 100%;
   border-color: #D6D8E0;
 }
+.ins-review_pk_chosen--container .ins__modal-confirm.ins__modal-show-preview .modal-dialog {
+  width: 700px;
+}
+.ins-review_pk_chosen--container .ins__modal-confirm.ins__modal-show-preview .modal-dialog .modal-content {
+  position: relative;
+}
+.ins-review_pk_chosen--container .ins__modal-confirm.ins__modal-show-preview .modal-dialog .modal-content button.close {
+  z-index: 1111;
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  outline: none;
+}
+.ins-review_pk_chosen--container .ins__modal-confirm.ins__modal-show-preview .modal-dialog .modal-content button.close span {
+  color: #2E3038;
+  font-size: 20px;
+}
+.ins-review_pk_chosen--container .ins__modal-confirm.ins__modal-show-preview .modal-dialog .modal-content .modal-body {
+  padding: 16px;
+}
+.ins-review_pk_chosen--container .ins__modal-confirm.ins__modal-show-preview .modal-dialog .modal-content .modal-body img {
+  width: 100%;
+}
 .wrapper-review {
   background: #FFFFFF;
   color: #2E3038;
@@ -2198,6 +2223,10 @@ body.template-adr-insurance .datepicker table tr td.day.active:hover {
 }
 .ins-review_pk_chosen--container.review-again .ins__panel-review-holder .panel-body .ins_review--sec .row-eq-height .rev--detail {
   color: #2E3038;
+}
+.ins-review_pk_chosen--container.review-again .ins__panel-review-holder .panel-body .ins_review--sec .row-eq-height .rev--detail img.ins_img-preview {
+  max-width: 80px;
+  max-height: 80px;
 }
 .ins-review_pk_chosen--container.review-again .ins__panel-review-holder .panel-body .ins_review--sec .ins__change-info {
   position: absolute;
@@ -2383,6 +2412,9 @@ body.template-adr-insurance .datepicker table tr td.day.active:hover {
 }
 .ip-fail-warp .ip-fail__description .number-cart {
   color: #E53935;
+}
+.ip-fail-warp .ip-fail__try-again {
+  justify-content: center;
 }
 .ip-fail-warp .ip-fail__btn-return {
   position: relative;

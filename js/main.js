@@ -284,7 +284,7 @@
                 parent = $el.closest('.ins__field-uploads');
             parent.find('.ins__form-file--label').removeClass('hidden');
             parent.find('.ins__response-area').addClass('hidden');
-        })
+        });
     }
 
     function Adr_Ins_CloneRowTB(){
@@ -508,6 +508,14 @@
             }
         });
     }
+    
+    function Adr_Ins_PreviewImageUploaded() {
+		$('#ins__upload-file-image, img.ins_img-preview').on('click', function () {
+			var image = $(this).attr('src');
+			$('#ins_modal_show_preview').find('img').attr('src',image);
+			$('#ins_modal_show_preview').modal({show: true});
+		});
+	}
 
     $(document).ready(function () {
 
@@ -565,6 +573,7 @@
         Adr_Ins_ShowSamePolicy();
         Adr_Ins_CheckRules();
         Adr_Ins_ControlTabs();
+		Adr_Ins_PreviewImageUploaded();
     });
 
     $(window).on('resize', function(){

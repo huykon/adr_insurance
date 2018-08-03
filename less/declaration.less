@@ -526,5 +526,30 @@ body.template-adr-insurance {
 				}
 			}
 		}
+		&.ins__modal-show-preview{
+			.modal-dialog{
+				width: 700px;
+				.modal-content{
+					position: relative;
+					button.close{
+						z-index: 1111;
+						position: absolute;
+						right: 1px;
+						top: 1px;
+						outline: none;
+						span{
+							color: #2E3038;
+							font-size: 20px;
+						}
+					}
+					.modal-body{
+						padding: 16px;
+						img{
+							width: 100%;
+						}
+					}
+				}
+			}
+		}
 	}
 }
