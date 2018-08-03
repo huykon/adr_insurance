@@ -169,14 +169,25 @@
     };
 
     function Adr_Ins_EqualHeight(item, data_pane) {
-        $('.ins__package-content').each(function () {
+        $('.ins__package-content.active').each(function () {
             var dt_max_items = $(this).data('max__items');
             if (typeof dt_max_items !== 'undefined' && dt_max_items > 0) {
                 for (var i = 0; i < dt_max_items; i++) {
-                    $(item+'['+data_pane+'=' + i + ']').Ins_equalHeights();
+                    $('.ins__package-content.active ' +item+'['+data_pane+'=' + i + ']').Ins_equalHeights();
                 }
             }
         });
+
+		$('.ins__nav-tabs--header a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+			$('.ins__package-content.active').each(function () {
+				var dt_max_items = $(this).data('max__items');
+				if (typeof dt_max_items !== 'undefined' && dt_max_items > 0) {
+					for (var i = 0; i < dt_max_items; i++) {
+						$('.ins__package-content.active ' +item+'['+data_pane+'=' + i + ']').Ins_equalHeights();
+					}
+				}
+			});
+		});
     }
 
     function Adr_Ins_Accordion(){
