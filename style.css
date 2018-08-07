@@ -492,6 +492,7 @@ Landing Page*/
   display: flex;
   color: #FFFFFF;
   align-items: center;
+  z-index: 99;
 }
 .wrapper-adr-insurance .ins-adr__chat-online .chat-icon {
   background-color: rgba(0, 0, 0, 0.22);
@@ -660,6 +661,11 @@ Landing Page*/
 .ins-fees .right-fees-section .fee__brand .ins__brand--img {
   text-align: center;
   padding: 18px;
+}
+.ins-fees .right-fees-section .fee__brand .ins__brand--img img {
+  width: 216px;
+  height: 88px;
+  margin: 0 auto;
 }
 .ins-benefit-section {
   background: #F3F4F6;
