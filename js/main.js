@@ -60,6 +60,7 @@
                 var value = $(this).data('choice');
                 $(this).closest($selectHolder).find($select).attr('value', value);
                 $(this).closest($selectHolder).find($hiddenTextField).attr('value', value);
+                $(this).closest($selectHolder).find($choiceList).hide();
             });
         });
     }
