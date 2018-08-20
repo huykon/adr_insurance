@@ -661,6 +661,9 @@ Landing Page*/
 .ins-fees .right-fees-section .fee__brand .ins__brand--img {
   text-align: center;
   padding: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .ins-fees .right-fees-section .fee__brand .ins__brand--img img {
   width: 216px;
@@ -2382,6 +2385,7 @@ body.template-adr-insurance .datepicker table tr td.day.active:hover {
   margin-bottom: 16px;
   height: 408px;
   overflow: hidden;
+  text-align: center;
 }
 .ins-review_pk_chosen--container.review-again .ins__modal-agree-rules .modal-footer {
   justify-content: center;
