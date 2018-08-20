@@ -30,7 +30,7 @@
                 if (nstyle == "none") {
                     menuDropdown.slideDown(100, function () {
                         $("html").bind("click", function (e) {
-                            if (!$(this).is(e.target) && !menuDropdown.is(e.target) && menuDropdown.has(e.target).length == 0) {
+                            if (!$(this).is(e.target) || !menuDropdown.is(e.target) || menuDropdown.has(e.target).length == 0) {
                                 menuDropdown.slideUp(100);
                                 $("html").unbind("click");
                             }
@@ -60,7 +60,7 @@
                 var value = $(this).data('choice');
                 $(this).closest($selectHolder).find($select).attr('value', value);
                 $(this).closest($selectHolder).find($hiddenTextField).attr('value', value);
-                $(this).closest($selectHolder).find($choiceList).hide();
+				$(this).closest($selectHolder).find($choiceList).slideUp(100);
             });
         });
     }
