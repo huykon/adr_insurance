@@ -104,6 +104,9 @@ Landing Page*/
   margin-right: 5px;
   margin-top: 4px;
 }
+.wrapper-adr-insurance .insw_selectbox--holder .insw__select-box.warning {
+  border-color: #FF7043;
+}
 .wrapper-adr-insurance .insw_selectbox--holder ul.ins__choose-list {
   /*display: none;*/
   width: 100%;
@@ -1784,6 +1787,7 @@ body.template-adr-insurance .datepicker table tr td.day.active:hover {
 }
 .ins-review_pk_chosen--container .ins_item__accd_review .panel-default .panel-body .ins__main--container:not(:first-child) {
   margin-top: 16px;
+  display: inline-block;
 }
 .ins-review_pk_chosen--container .ins_item__accd_review .panel-default .panel-body .ins__main--container .ins__main-benefits {
   margin: 0;
@@ -1832,6 +1836,24 @@ body.template-adr-insurance .datepicker table tr td.day.active:hover {
   display: block;
   font-size: 14px;
   line-height: 22px;
+}
+.ins-review_pk_chosen--container .ins_item__accd_review .panel-default .panel-body .ins__main--container.ins__first-rox {
+  margin-bottom: 16px;
+}
+.ins-review_pk_chosen--container .ins_item__accd_review .panel-default .panel-body .ins__main--container.ins__first-rox .ins__decla--row {
+  margin-bottom: 8px;
+}
+.ins-review_pk_chosen--container .ins_item__accd_review .panel-default .panel-body .ins__main--container .ins__de-startdate {
+  color: #8E9098;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.ins-review_pk_chosen--container .ins_item__accd_review .panel-default .panel-body .ins__main--container .ins__de-time-std {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #2E3038;
 }
 .ins-review_pk_chosen--container .ins_item__accd_review button.ins__change-age {
   position: absolute;
