@@ -1293,6 +1293,12 @@ Landing Page*/
 #ins-packages-section .ins__nav-tabs--content .ins__pk_main-col {
   border: 1px solid #BEC0C8;
 }
+#ins-packages-section .ins__nav-tabs--content .ins__pk_main-col.highlight__chosen {
+  border-color: #E53935;
+  -webkit-transition: all 0.2s ease 0s;
+  -o-transition: all 0.2s ease, 0s;
+  transition: all 0.2s ease 0s;
+}
 #ins-packages-section .ins__nav-tabs--content .ins__pk_main-col:hover {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
 }
