@@ -519,6 +519,9 @@ Landing Page*/
 .ins-slider-container .row_inner_ins--slider {
   position: relative;
 }
+.ins-slider-container .row_inner_ins--slider img {
+  width: 100%;
+}
 .ins-slider-container .form-comf__result {
   position: absolute;
   right: 0;
@@ -2413,7 +2416,7 @@ body.template-adr-insurance .datepicker table tr td.day.active:hover {
   margin-bottom: 16px;
   height: 408px;
   overflow: hidden;
-  text-align: center;
+  text-align: left;
 }
 .ins-review_pk_chosen--container.review-again .ins__modal-agree-rules .modal-footer {
   justify-content: center;
@@ -2954,10 +2957,10 @@ body.template-adr-insurance .datepicker table tr td.day.active:hover {
   margin: 0;
   padding: 0;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: flex-start;
   background: #FFFFFF;
-  align-items: center;
+  align-items: flex-start;
 }
 .ins--sidebar-product__item .product__item-logo {
   max-width: 80px;
