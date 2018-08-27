@@ -3,7 +3,7 @@
 
     // ADR Insurance Swiper
     function Adr_Ins_Swiper() {
-       	if (typeof $.fn.swiper === 'function') { console.log('123123');
+       	if (typeof $.fn.swiper === 'function') {
             var swiper = new Swiper('.swiper-container', {
                 pagination: '.swiper-pagination',
                 paginationClickable: true,
@@ -355,7 +355,20 @@
         });
     }
 
-    function Adr_Ins_FillValuetoSelect(object, val_display = "Chọn", val_attr = '', set_class = true, set_choiced = true) {
+    function Adr_Ins_FillValuetoSelect(object, val_display, val_attr , set_class, set_choiced) {
+		if (typeof val_display === 'undefined') {
+			val_display = "Chọn";
+		}
+		if (typeof val_attr === 'undefined') {
+			val_display = "";
+		}
+		if (typeof set_class === 'undefined') {
+			set_class = true;
+		}
+		if (typeof set_choiced === 'undefined') {
+			set_choiced = true;
+		}
+
         object.val(val_attr);
         if (set_class){
             object.closest('.insw_selectbox--holder').addClass('disabled');
