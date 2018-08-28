@@ -1703,6 +1703,11 @@ body.template-adr-insurance .datepicker table tr td.day.active:hover {
   background: #E53935;
   color: #FFFFFF;
 }
+body.page-insuranceDeclarationPage .datepicker .next.disabled,
+body.page-insuranceDeclarationPage .datepicker .prev.disabled {
+  visibility: visible !important;
+  pointer-events: none;
+}
 .wrapper-declaration {
   background: #FFFFFF;
   color: #2E3038;
