@@ -2,8 +2,8 @@
 	position: relative;
 	.insw_selectbox--holder{
 		position: relative;
-		width: 100%;
-		margin: 0 4px;
+		flex-grow: 1;
+		margin: 2px 4px 1px 4px;
 
 		&:first-child{
 			margin-left: 0;
@@ -26,10 +26,15 @@
 			background: #fff;
 
 			.ins__current-choice{
+				display: flex;
+				justify-content: space-between;
 				.selected-choice{
 					color: #2E3038;
 					font-size: 15px;
 					font-weight: 400;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+					overflow: hidden;
 				}
 				i.arrow-indicator{
 					float: right;

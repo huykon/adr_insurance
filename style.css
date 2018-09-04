@@ -71,8 +71,8 @@ Landing Page*/
 }
 .wrapper-adr-insurance .insw_selectbox--holder {
   position: relative;
-  width: 100%;
-  margin: 0 4px;
+  flex-grow: 1;
+  margin: 2px 4px 1px 4px;
 }
 .wrapper-adr-insurance .insw_selectbox--holder:first-child {
   margin-left: 0;
@@ -93,10 +93,17 @@ Landing Page*/
   text-align: left;
   background: #fff;
 }
+.wrapper-adr-insurance .insw_selectbox--holder .insw__select-box .ins__current-choice {
+  display: flex;
+  justify-content: space-between;
+}
 .wrapper-adr-insurance .insw_selectbox--holder .insw__select-box .ins__current-choice .selected-choice {
   color: #2E3038;
   font-size: 15px;
   font-weight: 400;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .wrapper-adr-insurance .insw_selectbox--holder .insw__select-box .ins__current-choice i.arrow-indicator {
   float: right;
@@ -1314,12 +1321,14 @@ Landing Page*/
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
+  height: 24px;
   color: #2E3038;
 }
 #ins-packages-section .ins__nav-tabs--content .ins__pk_main-col .pk__main_col--header .pk_skike_price {
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
+  height: 22px;
   color: #8E9098;
 }
 #ins-packages-section .ins__nav-tabs--content .ins__pk_main-col .pk__main_col--header .pk_skike_price .skike-price {
@@ -1945,6 +1954,7 @@ body.page-insuranceDeclarationPage .datepicker .prev.disabled {
 }
 .ins-review_pk_chosen--container .ins_form-content-of-change .ins__decla--each-line .rev__right-col .rev_flex-block .rev_flex-box--right .ins-dropdown_city {
   display: flex;
+  flex-wrap: wrap;
   margin-top: 8px;
 }
 .ins-review_pk_chosen--container .ins_form-content-of-change .ins__decla--each-line .rev__right-col .rev_flex-block .rev_flex-box--right .ins__input--date-picker {
